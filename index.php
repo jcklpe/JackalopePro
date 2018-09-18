@@ -17,7 +17,7 @@
 
 get_header(); ?>
 
-<div class="wrap">
+<div id="swup" class="wrap">
 
 <?php if ( have_posts() ) : ?>
 	<header class="page-header">
@@ -41,7 +41,7 @@ get_header(); ?>
 			* called content-___.php (where ___ is the Post Format name) and that will be used instead.
 			*/
 			// get_template_part( 'template-parts/post/content', get_post_format() ); ?>
-<section>
+<section class="a-fade">
 	<div class="text-container">
 		<h2 class="case-study-title">
 			<?php echo get_the_title(); ?>
