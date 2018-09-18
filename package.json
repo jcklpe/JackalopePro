@@ -1,0 +1,13 @@
+{
+  "name": "jackalopepro",
+  "version": "1.0.0",
+  "description": "professional theme for portfolio",
+  "scripts": {
+    "build": "webpack --mode development",
+    "dist": "webpack --mode production",
+    "watch": "webpack --watch --mode development"
+  },
+  "author": "Aslan French",
+  "devDependencies": {},
+  "dependencies": {}
+}
