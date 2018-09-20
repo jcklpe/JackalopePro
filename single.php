@@ -10,7 +10,8 @@
  */
 
 get_header(); ?>
-
+<div class="site-content-contain">
+<div id="swup content" class="site-content">
 <div class="wrap">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

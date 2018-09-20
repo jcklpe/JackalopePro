@@ -1,0 +1,34 @@
+{
+    "favorites.sortDirection": "ASC",
+    "favorites.groupsFirst": true,
+    "favorites.root": [
+        {
+            "type": "File",
+            "name": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\webpack.config.js",
+            "parent_id": null,
+            "workspacePath": "webpack.config.js",
+            "id": "bjvNMzJfmCUB5yl6"
+        },
+        {
+            "type": "File",
+            "name": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\package.json",
+            "parent_id": null,
+            "workspacePath": "package.json",
+            "id": "kUsnzAmGCtEHfXpJ"
+        },
+        {
+            "type": "File",
+            "name": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\index.php",
+            "parent_id": null,
+            "workspacePath": "index.php",
+            "id": "GkrQwMzAxlFXh43S"
+        },
+        {
+            "type": "Directory",
+            "name": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\assets\\js",
+            "parent_id": null,
+            "workspacePath": "assets\\js",
+            "id": "WKwAT0cvapGONoJe"
+        }
+    ]
+}

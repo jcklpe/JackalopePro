@@ -12,7 +12,8 @@ entry: ['./assets/js/src/app.js', './assets/css/src/app.scss'],
 output: {
     filename: './assets/js/build/app.min.js',
     path: path.resolve(__dirname)
-},
+    },
+watch: true,
 module: {
     rules: [
     // perform js babelization on all .js files
@@ -22,7 +23,7 @@ module: {
             use: {
                 loader: "babel-loader",
                 options: {
-                    presets: ['babel-preset-env']
+                    presets: ['@babel/preset-env']
                 }
             }
         },
