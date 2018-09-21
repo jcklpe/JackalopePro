@@ -459,8 +459,8 @@ function pro_adding_scripts() {
 	wp_register_script('jackalope-pro-script', get_template_directory_uri() . '/assets/js/build/app.min.js', array('jquery'), '', false);
 	wp_enqueue_script( 'jackalope-pro-script');
 
-	wp_register_script('swup-pro-script', get_template_directory_uri() . '/node_modules/swup/dist/swup.min.js', array('jquery'), '1.1', false);
-	wp_enqueue_script( 'swup-pro-script');
+	 wp_register_script('swup-pro-script', get_template_directory_uri() . '/node_modules/swup/dist/my.swup.js', array('jquery'), '1.1', false);
+	 wp_enqueue_script( 'swup-pro-script');
 
 }
 add_action( 'wp_enqueue_scripts', 'pro_adding_scripts' );

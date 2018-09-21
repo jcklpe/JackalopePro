@@ -1,8 +1,8 @@
 //this is from app.js
 
-
+import global from './global';
 //import Swup from 'swup'
-
+console.log("testing");
 
 
 // var options = {
