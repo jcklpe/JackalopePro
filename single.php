@@ -6,36 +6,33 @@
  *
  * @package JackalopePro
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  */
 
 get_header(); ?>
+
 <main id="swup" class="site-content-contain">
+	<a href="<?php $url = home_url(); echo $url; ?>" class="a-fade"> home</a>
 	<div id="content" class="a-fade site-content">
-		<main class="wrap">
+		<div class="wrap">
 			<div id="primary" class="content-area">
-				<main id="main" class="site-main" role="main">
+				<div id="main" class="site-main" role="main">
 
 					<?php
 						/* Start the Loop */
 						while ( have_posts() ) : the_post();
-
 							get_template_part( 'template-parts/post/content', get_post_format() );
-
-
-							the_post_navigation( array(
-								'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'twentyseventeen' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-								'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'twentyseventeen' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
-							) );
-						endwhile; // End of the loop.
-			?>
-
-		</main>
-		<!-- #main -->
+							// post navigation template part
+						endwhile; // End of the loop.?>
+				</div>
+				<!-- site-main-->
+			</div>
+			<!-- primary-->
+		</div>
+		<!-- wrap-->
 	</div>
-	<!-- #primary -->
-
+	<!--site- content-->
 </main>
-<!-- .wrap -->
+<!-- main swup-->
 
 <?php get_footer();
