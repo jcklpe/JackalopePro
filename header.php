@@ -23,7 +23,7 @@
 
 
 <?php wp_head(); ?>
-<!-- <script src="./node_modules/swup/dist/my.swup.js"></script> -->
+<!--  START OF THEME HEAD FILES-->
 <script>
 function domReady(callback) {
 	document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);

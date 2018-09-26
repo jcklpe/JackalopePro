@@ -2,10 +2,9 @@
 /**
  * Displays content for front page
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @package  JackalopePro
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  */
 
 ?>
@@ -41,9 +40,11 @@
 						get_the_title()
 					) );
 				?>
-			</div><!-- .entry-content -->
-
-		</div><!-- .wrap -->
-	</div><!-- .panel-content -->
-
-</article><!-- #post-## -->
+			</div>
+			<!-- .entry-content -->
+		</div>
+		<!-- .wrap -->
+	</div>
+	<!-- .panel-content -->
+</article>
+<!-- #post-## -->

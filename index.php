@@ -10,9 +10,11 @@
  */
 
 get_header(); ?>
+<?php get_template_part( 'template-parts/header/site', 'nav' ); ?>
+
 
 <main id="swup" class="site-content-contain">
-
+<?php get_template_part( 'template-parts/header/site', 'hero' ); ?>
 	<div id="content" class="a-fade site-content">
 		<div class="case-study wrap">
 			<?php if ( have_posts() ) :

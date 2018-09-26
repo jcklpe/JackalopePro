@@ -36,6 +36,13 @@
             "parent_id": null,
             "workspacePath": "node_modules\\swup\\dist\\my.swup.js",
             "id": "t3xdHqwMiWoV6C8m"
+        },
+        {
+            "type": "Directory",
+            "name": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\template-parts",
+            "parent_id": null,
+            "workspacePath": "template-parts",
+            "id": "2l51SgvAXzORVBFM"
         }
     ]
 }

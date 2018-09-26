@@ -9,9 +9,11 @@
  * @version 1.1
  */
 
-get_header(); ?>
+get_header(); //testd?>
+<?php get_template_part( 'template-parts/header/site', 'nav' ); ?>
 
 <main id="swup" class="site-content-contain">
+<?php get_template_part( 'template-parts/header/blog', 'hero' ); ?>
 	<a href="<?php $url = home_url(); echo $url; ?>" class="a-fade"> home</a>
 	<div id="content" class="a-fade site-content">
 		<div class="wrap">
@@ -32,6 +34,7 @@ get_header(); ?>
 		<!-- wrap-->
 	</div>
 	<!--site- content-->
+	<?php get_template_part( 'template-parts/footer/case_study', 'links' ); ?>
 </main>
 <!-- main swup-->
 

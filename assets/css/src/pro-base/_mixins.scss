@@ -1,0 +1,29 @@
+//- Mixins and utilities
+
+    //-add  border
+@mixin border-it($color) {
+    border: 3px solid $color;
+    }
+
+    //-Responsive Mixins
+@mixin breakpoint($class) {
+    @if $class == phone {
+      @media (max-width: 767px) { @content; }
+    }
+
+    @else if $class == tablet {
+      @media (min-width: 768px) { @content; }
+    }
+
+    @else if $class == desktop {
+      @media (min-width: 992px) { @content; }
+    }
+
+    @else if $class == desktopLG {
+      @media (min-width: 1200px) { @content; }
+    }
+
+    @else {
+      @warn "Breakpoint mixin supports: phone, tablet, desktop, desktopLG";
+    }
+}
