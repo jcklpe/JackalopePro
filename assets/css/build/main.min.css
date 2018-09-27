@@ -3250,6 +3250,13 @@ html.is-animating .a-fade {
 #content.site-content {
   padding: 0; }
 
+div.entry-content {
+  float: none !important;
+  width: 100% !important; }
+
+.ab-profile-column.ab-profile-avatar-wrap {
+  flex: 3 0 0 !important; }
+
 .case-study.wrap {
   position: relative;
   max-width: 100vw;
@@ -3495,4 +3502,42 @@ div#mc_embed_signup {
   #mc_embed_signup .button {
     width: 100%;
     margin: 0; } }
+
+section.case-study-links {
+  display: flex;
+  min-height: 40vh;
+  margin-bottom: 100px; }
+  section.case-study-links figure.case-study-box {
+    position: relative;
+    height: 40vh;
+    min-width: 25vw;
+    overflow: hidden; }
+    section.case-study-links figure.case-study-box a.text-container {
+      display: block;
+      position: absolute;
+      padding: 25px;
+      z-index: 5; }
+      section.case-study-links figure.case-study-box a.text-container h2 {
+        color: white; }
+        section.case-study-links figure.case-study-box a.text-container h2 span {
+          background: black; }
+      section.case-study-links figure.case-study-box a.text-container h3 {
+        color: white; }
+        section.case-study-links figure.case-study-box a.text-container h3 span {
+          background: black; }
+    section.case-study-links figure.case-study-box img {
+      object-fit: cover;
+      min-height: 110%;
+      min-width: 110%;
+      z-index: 0;
+      position: absolute;
+      top: -25px;
+      left: -25px; }
+    section.case-study-links figure.case-study-box div.overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 100%;
+      min-width: 100%;
+      z-index: 1; }
 

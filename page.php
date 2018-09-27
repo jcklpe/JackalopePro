@@ -16,7 +16,9 @@
  */
 
 get_header(); ?>
+<?php get_template_part( 'template-parts/header/site', 'nav' ); ?>
 
+<main id="swup" class="site-content-contain">
 <div class="wrap">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -36,6 +38,8 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-</div><!-- .wrap -->
+</div>
+<!-- .wrap -->
+</main>
 
 <?php get_footer();

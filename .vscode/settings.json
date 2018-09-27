@@ -43,6 +43,13 @@
             "parent_id": null,
             "workspacePath": "template-parts",
             "id": "2l51SgvAXzORVBFM"
+        },
+        {
+            "type": "Directory",
+            "name": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\assets\\css",
+            "parent_id": null,
+            "workspacePath": "assets\\css",
+            "id": "oWIeBN3lGS5TLApY"
         }
     ]
 }
