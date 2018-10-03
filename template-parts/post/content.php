@@ -46,7 +46,8 @@
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
 			</a>
-		</div><!-- .post-thumbnail -->
+		</div>
+		<!-- .post-thumbnail -->
 	<?php endif; ?>
 
 	<div class="entry-content">

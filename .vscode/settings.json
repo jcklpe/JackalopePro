@@ -46,10 +46,11 @@
         },
         {
             "type": "Directory",
-            "name": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\assets\\css",
+            "name": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\assets\\css\\src",
             "parent_id": null,
-            "workspacePath": "assets\\css",
-            "id": "oWIeBN3lGS5TLApY"
+            "workspacePath": "assets\\css\\src",
+            "id": "PWRSh2dXF4sBycDK",
+            "label": "CSS"
         }
     ]
 }

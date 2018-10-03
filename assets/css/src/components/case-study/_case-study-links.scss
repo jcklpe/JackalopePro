@@ -1,10 +1,12 @@
+//- Case Study Links
+
 section.case-study-links{
     display: flex;
     min-height: 40vh;
     margin-bottom: 100px;
     //flex-direction: column;
 
-figure.case-study-box {
+    figure.case-study-box {
     position: relative;
     //@include border-it(blue);
     height: 40vh;
@@ -12,7 +14,7 @@ figure.case-study-box {
     overflow: hidden;
 
 
-    a.text-container {
+        a.text-container {
         display: block;
         position: absolute;
         padding: 25px;
@@ -21,20 +23,20 @@ figure.case-study-box {
         h2 {
             color: white;
             span {
-                background:black;
+                background:$black;
             }
         }
 
         h3 {
             color: white;
             span {
-                background:black;
+                background:$black;
             }
         }
 
     }
 
-    img {
+        img {
         object-fit: cover;
         min-height: 110%;
         min-width: 110%;
@@ -42,9 +44,9 @@ figure.case-study-box {
         position: absolute;
         top:-25px;
         left:-25px;
-    }
+        }
 
-    div.overlay {
+        div.overlay {
         position: absolute;
         top:0;
         left:0;
@@ -52,7 +54,7 @@ figure.case-study-box {
         min-width: 100%;
         z-index: 1;
 
-    }
+        }
     }
 
 }

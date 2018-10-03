@@ -2699,12 +2699,9 @@ p > embed:only-child, p > iframe:only-child, p > object:only-child {
     font-size: 1rem; }
   /* Navigation */
   .navigation-top {
-    bottom: 0;
     font-size: 14px;
     font-size: 0.875rem;
-    left: 0;
     position: absolute;
-    right: 0;
     width: 100%;
     z-index: 3; }
     .navigation-top .wrap {
@@ -3247,6 +3244,16 @@ p > embed:only-child, p > iframe:only-child, p > object:only-child {
 html.is-animating .a-fade {
   opacity: 0; }
 
+span.edit-link {
+  position: absolute;
+  bottom: 100px;
+  background: yellow;
+  font-size: 2em !important;
+  font-weight: bold; }
+
+a:focus {
+  outline: none !important; }
+
 #content.site-content {
   padding: 0; }
 
@@ -3291,11 +3298,203 @@ div.entry-content {
       left: 0;
       min-height: 100%;
       min-width: 100%;
-      z-index: 1; }
+      z-index: 1;
+      box-shadow: rgba(0, 0, 0, 0.4) 1px 10px 20px inset; }
 
 #primary.content-area {
   width: 100% !important;
   float: none; }
+
+section.case-study-links {
+  display: flex;
+  min-height: 40vh;
+  margin-bottom: 100px; }
+  section.case-study-links figure.case-study-box {
+    position: relative;
+    height: 40vh;
+    min-width: 25vw;
+    overflow: hidden; }
+    section.case-study-links figure.case-study-box a.text-container {
+      display: block;
+      position: absolute;
+      padding: 25px;
+      z-index: 5; }
+      section.case-study-links figure.case-study-box a.text-container h2 {
+        color: white; }
+        section.case-study-links figure.case-study-box a.text-container h2 span {
+          background: black; }
+      section.case-study-links figure.case-study-box a.text-container h3 {
+        color: white; }
+        section.case-study-links figure.case-study-box a.text-container h3 span {
+          background: black; }
+    section.case-study-links figure.case-study-box img {
+      object-fit: cover;
+      min-height: 110%;
+      min-width: 110%;
+      z-index: 0;
+      position: absolute;
+      top: -25px;
+      left: -25px; }
+    section.case-study-links figure.case-study-box div.overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 100%;
+      min-width: 100%;
+      z-index: 1; }
+
+/*--------------------------------------------------------------
+12.0 Navigation
+--------------------------------------------------------------*/
+.navigation-top {
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  position: absolute;
+  bottom: initial !important; }
+  .navigation-top .wrap {
+    max-width: 1000px;
+    padding: 0; }
+  .navigation-top a {
+    color: white;
+    font-weight: 600;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s; }
+  .navigation-top .current-menu-item > a,
+  .navigation-top .current_page_item > a {
+    color: white; }
+
+.main-navigation {
+  clear: both;
+  display: block; }
+  .main-navigation ul {
+    background: black;
+    list-style: none;
+    margin: 0;
+    padding: 0 1.5em;
+    text-align: left; }
+
+/*- Hide the menu on small screens when JavaScript is available.
+   * It only works with JavaScript.
+   */
+.js .main-navigation ul {
+  display: none; }
+
+.main-navigation .menu-item-has-children > a > .icon,
+.main-navigation .page_item_has_children > a > .icon,
+.main-navigation ul a > .icon {
+  display: none; }
+
+.main-navigation > div > ul {
+  border-top: 1px solid white;
+  padding: 0.75em 1.695em; }
+
+.js .main-navigation.toggled-on > div > ul {
+  display: block; }
+
+.main-navigation ul ul {
+  padding: 0 0 0 1.5em; }
+  .main-navigation ul ul.toggled-on {
+    display: block; }
+  .main-navigation ul ul a {
+    letter-spacing: 0;
+    padding: 0.4em 0;
+    position: relative;
+    text-transform: none; }
+
+.main-navigation li {
+  position: relative;
+  margin-right: 20px; }
+  .main-navigation li li, .main-navigation li:last-child {
+    border: 0; }
+
+.main-navigation a {
+  display: block;
+  padding: 0.5em 0;
+  text-decoration: none; }
+  .main-navigation a:hover {
+    color: #767676; }
+
+/* Menu toggle */
+.menu-toggle {
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #222;
+  display: none;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 1.5;
+  margin: 1px auto 2px;
+  padding: 1em;
+  text-shadow: none; }
+
+/* Display the menu toggle when JavaScript is available. */
+.js .menu-toggle,
+.main-navigation.toggled-on ul.nav-menu {
+  display: block; }
+
+.menu-toggle:hover {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.menu-toggle:focus {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: thin solid; }
+
+.menu-toggle .icon {
+  margin-right: 0.5em;
+  top: -2px; }
+
+.toggled-on .menu-toggle .icon-bars,
+.menu-toggle .icon-close {
+  display: none; }
+
+.toggled-on .menu-toggle .icon-close {
+  display: inline-block; }
+
+/* Dropdown Toggle */
+.dropdown-toggle {
+  background-color: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #222;
+  display: block;
+  font-size: 16px;
+  right: -0.5em;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 0.5em;
+  position: absolute;
+  text-shadow: none;
+  top: 0; }
+  .dropdown-toggle:hover {
+    background: transparent; }
+  .dropdown-toggle:focus {
+    background: transparent;
+    outline: thin dotted; }
+  .dropdown-toggle.toggled-on .icon {
+    -ms-transform: rotate(-180deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-180deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-180deg); }
+
+/* Scroll down arrow */
+.site-header .menu-scroll-down {
+  display: none; }
+
+.js .main-navigation ul {
+  display: inline !important; }
+
+footer#colophon.site-footer {
+  margin-top: -1px !important; }
 
 div#mc_embed_signup {
   padding: 75px 5px 70px 10px;
@@ -3413,7 +3612,7 @@ div#mc_embed_signup {
 
 /* positions input field horizontally */
 #mc_embed_signup input.email {
-  font-family: "Open Sans","Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
   font-size: 15px;
   border: 1px solid #ABB0B2;
   -webkit-border-radius: 3px;
@@ -3503,41 +3702,25 @@ div#mc_embed_signup {
     width: 100%;
     margin: 0; } }
 
-section.case-study-links {
+section.hero {
+  position: relative;
   display: flex;
-  min-height: 40vh;
-  margin-bottom: 100px; }
-  section.case-study-links figure.case-study-box {
-    position: relative;
-    height: 40vh;
-    min-width: 25vw;
-    overflow: hidden; }
-    section.case-study-links figure.case-study-box a.text-container {
-      display: block;
-      position: absolute;
-      padding: 25px;
-      z-index: 5; }
-      section.case-study-links figure.case-study-box a.text-container h2 {
-        color: white; }
-        section.case-study-links figure.case-study-box a.text-container h2 span {
-          background: black; }
-      section.case-study-links figure.case-study-box a.text-container h3 {
-        color: white; }
-        section.case-study-links figure.case-study-box a.text-container h3 span {
-          background: black; }
-    section.case-study-links figure.case-study-box img {
-      object-fit: cover;
-      min-height: 110%;
-      min-width: 110%;
-      z-index: 0;
-      position: absolute;
-      top: -25px;
-      left: -25px; }
-    section.case-study-links figure.case-study-box div.overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-height: 100%;
-      min-width: 100%;
-      z-index: 1; }
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  overflow: hidden; }
+  section.hero h1.case-study.title {
+    position: absolute;
+    color: white; }
+    section.hero h1.case-study.title span {
+      background: black; }
+
+a.wp-block-button__link {
+  border-radius: 0px !important;
+  background: #32373c; }
+
+ul.ab-social-links li a {
+  background: #32373c !important; }
+  ul.ab-social-links li a i {
+    background: #32373c !important; }
 

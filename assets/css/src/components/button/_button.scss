@@ -1,0 +1,15 @@
+a.wp-block-button__link {
+    border-radius: 0px!important;
+    background: $charcoal; //determined elsewhere
+}
+
+ul.ab-social-links {
+        li {
+            a {
+            background: $charcoal !important; //actually determined by the block settings
+                i {
+                    background: $charcoal !important;
+                }
+            }
+        }
+}

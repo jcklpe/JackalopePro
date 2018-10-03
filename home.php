@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: FrontPageTest1
+ * Template Name: Home2
  *
  * Description: A custom template for displaying a fullwidth layout with no sidebar.
  *
@@ -8,20 +8,18 @@
  * @version 1.5
  */
 
-get_header();
-get_template_part( 'template-parts/header/site', 'nav' ); ?>
+get_header(); ?>
+<?php get_template_part( 'template-parts/header/site', 'nav' ); ?>
+
 
 <main id="swup" class="site-content-contain">
+<p>this is home.php</p>
 <?php get_template_part( 'template-parts/header/blog', 'hero' ); ?>
 	<div id="content" class="a-fade site-content">
 		<div class="case-study wrap">
-
-
-			<?php
-			$args = array('post_type' => 'post');
-			$the_query = new WP_Query( $args );
-			if ( $the_query->have_posts() ) :
-				while ( $the_query->have_posts() ) : $the_query->the_post();?>
+			<?php if ( have_posts() ) :
+				/* Start the Loop */
+				while ( have_posts() ) : the_post();?>
 					<section class="a-fade case-study-box">
 						<a class="text-container" href="
 						<?php the_permalink(); ?>">

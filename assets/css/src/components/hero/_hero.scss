@@ -1,0 +1,19 @@
+section.hero{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    overflow: hidden;
+
+    h1.case-study.title {
+    position: absolute;
+
+    color: white;
+
+    span {
+        background: black;
+    }
+
+    }
+}
