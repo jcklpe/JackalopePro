@@ -1,6 +1,7 @@
 section.hero{
     position: relative;
     display: flex;
+    // top: -150px;
     align-items: center;
     justify-content: center;
     height: 90vh;
@@ -8,12 +9,22 @@ section.hero{
 
     h1.case-study.title {
     position: absolute;
-
+    top: 150px;
+    font-size: 5em;
+    font-weight: 700;
     color: white;
+    @include title-shadow-1;
+    text-align: center;
+
 
     span {
-        background: black;
+        background: $black;
+        @include span-shadow-hero;
     }
 
     }
+}
+
+.single-featured-image-header {
+    border: none!important;
 }

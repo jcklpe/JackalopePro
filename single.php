@@ -14,7 +14,6 @@ get_header(); //testd?>
 
 <main id="swup" class="site-content-contain">
 <?php get_template_part( 'template-parts/header/blog', 'hero' ); ?>
-	<a href="<?php $url = home_url(); echo $url; ?>" class="a-fade"> home</a>
 	<div id="content" class="a-fade site-content">
 		<div class="wrap">
 			<div id="primary" class="content-area">

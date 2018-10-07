@@ -1,14 +1,17 @@
 a.wp-block-button__link {
     border-radius: 0px!important;
-    background: $charcoal; //determined elsewhere
+    background: $black!important; //determined elsewhere
+    @include block-small(2px, 2px, 10px);
 }
 
 ul.ab-social-links {
         li {
             a {
-            background: $charcoal !important; //actually determined by the block settings
+            background: $black !important; //actually determined by the block settings
+
                 i {
-                    background: $charcoal !important;
+                    background: $black !important;
+                    @include block-small(1px, 1px, 3px);
                 }
             }
         }

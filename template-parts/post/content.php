@@ -4,8 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage JackalopePro
+ * @package  JackalopePro
  * @since 1.0
  * @version 1.2
  */
@@ -22,24 +21,26 @@
 		<?php
 		if ( 'post' === get_post_type() ) {
 			echo '<div class="entry-meta">';
-				if ( is_single() ) {
-					twentyseventeen_posted_on();
-				} else {
-					echo twentyseventeen_time_link();
-					twentyseventeen_edit_link();
-				};
-			echo '</div><!-- .entry-meta -->';
+				// if ( is_single() ) {
+				// 	twentyseventeen_posted_on();
+				// } else {
+				// 	echo twentyseventeen_time_link();
+				// 	twentyseventeen_edit_link();
+				// };
+			echo '</div>
+			<!-- .entry-meta -->';
 		};
 
-		if ( is_single() ) {
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		} elseif ( is_front_page() && is_home() ) {
-			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-		} else {
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		}
+		// if ( is_single() ) {
+		// 	the_title( '<h1 class="entry-title">', '</h1>' );
+		// } elseif ( is_front_page() && is_home() ) {
+		// 	the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+		// } else {
+		// 	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		// }
 		?>
-	</header><!-- .entry-header -->
+	</header>
+	<!-- .entry-header -->
 
 	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
 		<div class="post-thumbnail">

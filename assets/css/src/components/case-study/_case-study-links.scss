@@ -22,15 +22,19 @@ section.case-study-links{
 
         h2 {
             color: white;
+
             span {
                 background:$black;
+                @include span-shadow-2;
             }
         }
 
         h3 {
             color: white;
+
             span {
                 background:$black;
+                @include span-shadow-2
             }
         }
 

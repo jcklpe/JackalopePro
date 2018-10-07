@@ -1,5 +1,60 @@
 //- Case Study Article
+div.wrap {
+    background: white;
+    position: relative;
+    top: -200px;
+    z-index: 5;
+    border-radius: 2px;
+    box-shadow:
+        0 7px 10px 0 rgba(0, 0, 0, 0.3),
+        5px 10px 10px 0 rgba(0, 0, 0, 0.1),
+        10px 12px 8px rgba(0, 0, 0, 0.09),
+        1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
+}
+
 #primary.content-area {
-    width: 100%!important;
+    width: 100% !important;
     float: none;
+}
+
+
+div.entry-content {
+
+    // background: white;
+    // position: relative;
+    // top: -100px;
+    // z-index: 5;
+
+    h2 {
+        background: $black;
+        display: inline-block;
+        color: white;
+        font-weight: 500;
+        padding: .2em;
+        padding-right: 2em;
+        padding-left: 3em;
+        margin-left: -5em;
+        margin-bottom: -60px;
+        position: relative;
+        top: -50px;
+        font-size: 2.5em;
+        font-weight: 600;
+        @include block-small(3px, 5px, 15px);
+        @include title-shadow-2;
+    }
+
+    h3 {
+
+        background: $black;
+        display: inline-block;
+        color: white;
+        font-weight: 500;
+        padding: .15em;
+        padding-right: 0.5em;
+        padding-left: .9em;
+        margin-left: -1em;
+        position: relative;
+        font-size: 1.2em;
+        @include block-small(2px, 2px, 5px);
+    }
 }

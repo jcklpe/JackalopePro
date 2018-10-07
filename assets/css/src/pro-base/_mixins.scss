@@ -27,3 +27,115 @@
       @warn "Breakpoint mixin supports: phone, tablet, desktop, desktopLG";
     }
 }
+
+@mixin title-shadow-1 {
+  text-shadow:
+    1px 1px 1px #ebebeb,
+    -1px -1px 1px #ebebeb,
+    0 0.5px 0 #e8e8e8,
+    0 1px 0 #e5e5e5,
+    0 1.5px 0 #dedede,
+    0 2px 0 #d8d8d8,
+    0 2.5px 0 #cccccc,
+    0 3px 0 #c6c6c6,
+    0 3.5px 0 #c0c0c0,
+    0 4px 0 #b4b4b4,
+    0 4.5px 0 #aeaeae,
+    0 5px 0 #a8a8a8,
+    0 5.5px 0 #9c9c9c,
+    0 6px 0 #969696,
+    0 6.5px 0 #909090,
+    0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
+
+
+
+
+}
+
+@mixin title-shadow-2 {
+  text-shadow:
+    0 -1px 0px rgb(155, 165, 164),
+    0 0px 1px rgb(166, 179, 177),
+    0 1px 1px rgb(233, 241, 241),
+    0 2px 1px rgb(199, 207, 206),
+    0 3px 1px rgb(165, 173, 172),
+    0 4px 0px rgb(110, 116, 115),
+    0 5px 0px rgb(66, 70, 69),
+
+    0 0 5px rgba(0,0,0,.05),
+    0 1px 3px rgba(0,0,0,.2),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.2),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.3);
+
+}
+
+@mixin block-big($x-axis, $y-axis, $blur) {
+  box-shadow:
+                  0 0px 1px 1px rgb(20, 20, 20),
+                  0 5px 2px 1px rgb(0, 0, 0),
+                  inset $x-axis $y-axis $blur 0 rgb(50, 55, 50),
+                  0 14px 20px 0 rgba(0, 0, 0, 0.5),
+                  10px 24px 50px 0 rgba(0, 0, 0, 0.15),
+                  20px 34px 30px rgba(0, 0, 0, 0.1),
+                  2px 6px 47px 0px rgba(0, 0, 0, 0.1) !important;
+
+
+}
+
+@mixin block-small($x-axis, $y-axis, $blur) {
+  box-shadow:
+                  0 0px 1px 1px rgb(20, 20, 20),
+                  0 2px 1px 1px rgb(0, 0, 0),
+                  inset $x-axis $y-axis $blur 0 rgb(50, 55, 50),
+                  0 7px 10px 0 rgba(0, 0, 0, 0.3),
+                  5px 10px 10px 0 rgba(0, 0, 0, 0.1),
+                  10px 12px 8px rgba(0, 0, 0, 0.09),
+                  1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
+
+
+}
+
+@mixin span-shadow-hero {
+                  @include block-big(6px, 4px, 25px);
+
+                  background-color: rgb(10,10,10);
+                  color: #fff;
+                  display: inline;
+                  padding: 0.3em;
+                  /* Needs prefixing */
+                  box-decoration-break: clone;
+                  -webkit-box-decoration-break: clone;
+
+                  border-radius: 1px;
+                  line-height: 1.9;
+}
+
+
+@mixin span-shadow-1 {
+                  @include block-big(6px, 4px, 25px);
+
+                  background-color: rgb(10,10,10);
+                  color: #fff;
+                  display: inline;
+                  padding: 0.3em;
+                  padding-right: 2em;
+                  /* Needs prefixing */
+                  box-decoration-break: clone;
+                  -webkit-box-decoration-break: clone;
+
+                  border-radius: 1px;
+                  line-height: 1.9;
+}
+
+@mixin span-shadow-2 {
+  @include block-small(3px, 1px, 10px);
+
+                  padding: .2em;
+                  padding-right: 3em;
+                  /* Needs prefixing */
+                  box-decoration-break: clone;
+                  -webkit-box-decoration-break: clone;
+                  line-height: 1.8;
+}
