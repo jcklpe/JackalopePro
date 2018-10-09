@@ -31,13 +31,14 @@ function domReady(callback) {
 domReady(function() {
 	const domain = window.location.origin
 
-const swup = new Swup({
-    LINK_SELECTOR: `a[href*="${domain}"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup]), a[xlink\\:href]`,
-})
+	const swup = new Swup({
+		LINK_SELECTOR: `a[href*="${domain}"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup]), a[xlink\\:href]`,
+	})
 
 
-
-	});
+	console.log("this is running from inside the dom function");
+	//end of swup function call
+});
 
 </script>
 

@@ -1,8 +1,37 @@
 //- Animation
-.a-fade {
+.transition-fade {
     transition: .4s;
     opacity: 1;
 }
-html.is-animating .a-fade{
-    opacity: 0;
+html.is-animating .transition-fade{
+    transition: .4s;
+    opacity: 0!important;
+}
+
+.transition-move-down {
+    transition: all .5s;
+    opacity: 1!important;
+    top: 0;
+
+
+}
+
+html.is-animating .transition-move-down{
+    transition: all .4s;
+    opacity: 0!important;
+    top: -70vh;
+
+}
+
+
+
+.transition-move-right {
+    transition: all .5s;
+    opacity: 1!important;
+    // right: 0;
+}
+html.is-animating .transition-move-right{
+    transition: all .4s;
+    opacity: 0!important;
+    // right: -100vw;
 }

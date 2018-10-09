@@ -75,11 +75,14 @@
   box-shadow:
                   0 0px 1px 1px rgb(20, 20, 20),
                   0 5px 2px 1px rgb(0, 0, 0),
-                  inset $x-axis $y-axis $blur 0 rgb(50, 55, 50),
+                  inset $x-axis $y-axis $blur 0 rgb(30, 35, 30),
                   0 14px 20px 0 rgba(0, 0, 0, 0.5),
                   10px 24px 50px 0 rgba(0, 0, 0, 0.15),
                   20px 34px 30px rgba(0, 0, 0, 0.1),
                   2px 6px 47px 0px rgba(0, 0, 0, 0.1) !important;
+
+                  box-decoration-break: clone;
+                  -webkit-box-decoration-break: clone;
 
 
 }
@@ -88,11 +91,14 @@
   box-shadow:
                   0 0px 1px 1px rgb(20, 20, 20),
                   0 2px 1px 1px rgb(0, 0, 0),
-                  inset $x-axis $y-axis $blur 0 rgb(50, 55, 50),
+                  inset $x-axis $y-axis $blur 0 rgb(30 , 35 , 30),
                   0 7px 10px 0 rgba(0, 0, 0, 0.3),
                   5px 10px 10px 0 rgba(0, 0, 0, 0.1),
                   10px 12px 8px rgba(0, 0, 0, 0.09),
                   1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
+
+                  box-decoration-break: clone;
+                  -webkit-box-decoration-break: clone;
 
 
 }
@@ -125,7 +131,7 @@
                   box-decoration-break: clone;
                   -webkit-box-decoration-break: clone;
 
-                  border-radius: 1px;
+                  border-radius: 0px;
                   line-height: 1.9;
 }
 

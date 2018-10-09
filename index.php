@@ -14,12 +14,12 @@ get_header(); ?>
 
 <main id="swup" class="site-content-contain">
 <?php get_template_part( 'template-parts/header/site', 'hero' ); ?>
-	<div id="content" class="a-fade site-content">
+	<div id="content" class="transition-fade site-content">
 		<div class="case-study wrap">
 			<?php if ( have_posts() ) :
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();?>
-					<section class="a-fade case-study-box">
+					<section class="transition-fade case-study-box">
 						<a class="text-container" href="
 						<?php the_permalink(); ?>">
 							<h2 class="case-study-title">

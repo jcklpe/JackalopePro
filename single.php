@@ -9,13 +9,13 @@
  * @version 1.1
  */
 
-get_header(); //testd?>
+get_header(); ?>
 <?php get_template_part( 'template-parts/header/site', 'nav' ); ?>
 
 <main id="swup" class="site-content-contain">
 <?php get_template_part( 'template-parts/header/blog', 'hero' ); ?>
-	<div id="content" class="a-fade site-content">
-		<div class="wrap">
+	<div id="content" class="transition-fade site-content">
+		<div class="wrap wrap-post">
 			<div id="primary" class="content-area">
 				<div id="main" class="site-main" role="main">
 

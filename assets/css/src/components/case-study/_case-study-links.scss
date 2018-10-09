@@ -25,7 +25,11 @@ section.case-study-links{
 
             span {
                 background:$black;
-                @include span-shadow-2;
+                padding: .2em 1.2em .2em .6em;
+
+
+                @include block-small(2px, 1px, 3px);
+                line-height: 1.6
             }
         }
 
@@ -34,7 +38,10 @@ section.case-study-links{
 
             span {
                 background:$black;
-                @include span-shadow-2
+                padding: .2em 1em;
+
+                @include block-small(1px, 0px, 1px);
+                line-height: 1.6;
             }
         }
 

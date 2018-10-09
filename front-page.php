@@ -13,7 +13,7 @@ get_template_part( 'template-parts/header/site', 'nav' ); ?>
 
 <main id="swup" class="site-content-contain">
 <?php get_template_part( 'template-parts/header/blog', 'hero' ); ?>
-	<div id="content" class="a-fade site-content">
+	<div id="content" class="transition-fade site-content">
 		<div class="case-study wrap">
 
 
@@ -22,7 +22,7 @@ get_template_part( 'template-parts/header/site', 'nav' ); ?>
 			$the_query = new WP_Query( $args );
 			if ( $the_query->have_posts() ) :
 				while ( $the_query->have_posts() ) : $the_query->the_post();?>
-					<section class="a-fade case-study-box">
+					<section class="transition-move-right case-study-box">
 						<a class="text-container" href="
 						<?php the_permalink(); ?>">
 							<h2 class="case-study-title">

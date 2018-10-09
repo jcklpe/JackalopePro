@@ -1,0 +1,85 @@
+  //////////////////////////
+  //- FOOTER LINKS
+  div.footer-links {
+    //   position: absolute;
+    //   right: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding:50px;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+
+
+
+      @include breakpoint(phone) {
+
+          position: relative;
+          right: 0;
+          flex: 0 0 100%;
+
+
+              padding: 0;
+              padding-bottom: 100px;
+
+      }
+
+      a {
+          background: black;
+          line-height: 1.7;
+          color: white;
+          overflow: hidden;
+          font-weight: 500;
+          font-size: 2em;
+          z-index: 50;
+          position: relative;
+          display: inline-block;
+          outline: none;
+          vertical-align: bottom;
+          text-decoration: none;
+          white-space: nowrap;
+          //font-family: $bold;
+          font-size: 17px;
+          margin: 25px 50px;
+
+          &:hover {
+              color: white;
+          }
+
+          &:focus {
+              color: white;
+          }
+
+          &::before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: -1;
+              width: 100%;
+              height: 100%;
+              background-color: $blue;
+              content: '';
+              transition: transform 0.2s $AniCurve;
+              transform: translateY(95%);
+
+          }
+
+          &:hover::before {
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+              color: white !important;
+          }
+
+          &:focus::before {
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+              color: white !important;
+          }
+
+      }
+
+      ///end of anchor
+
+  }
+
+  /// End of Footer links

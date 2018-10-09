@@ -24,7 +24,7 @@ $tags = wp_get_post_tags($post->ID);
 	$my_query = new WP_Query($args);
 	if( $my_query->have_posts() ) {
 		while ($my_query->have_posts()) : $my_query->the_post(); ?>
-			<figure class="a-fade case-study-box">
+			<figure class="transition-fade case-study-box">
                 <a class="text-container" href="<?php the_permalink(); ?>">
 					<h2 class="case-study-title">
 						<span><?php echo get_the_title(); ?></span>
