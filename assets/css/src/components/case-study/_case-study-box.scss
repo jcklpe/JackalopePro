@@ -1,6 +1,6 @@
 //- Case Study Box
 
-.case-study.wrap{
+.case-study.wrap {
     position: relative;
     max-width: 100vw;
     padding: 0;
@@ -8,59 +8,147 @@
     section.case-study-box {
         position: relative;
         //@include border-it(blue);
-        height: 40vh;
+        height: 60vh;
         overflow: hidden;
+        // the first one defines the angled corner.
+        //     clip-path: polygon(
+        //         0 calc(100% - 45vw),
+        //         100% 0%,
+        //         100% 100%,
+        //         0 100%
+        //             );
+        // margin-top: 10vw;
+        clip-path: polygon(0 calc(0% + 10vw),
+            100% 0,
+            100% 100%,
+            0 100%);
+        margin-bottom: -10vw;
+        @include center-flex;
+
+        @include breakpoint(phone) {
+            height: 60vh;
+        }
 
         a.text-container {
             display: block;
             position: relative;
+            top: 0px;
             padding: 25px;
             padding-top: 70px;
             z-index: 5;
+            align-self: flex-start;
 
-            h2 {
+            h2.case-study-title {
                 color: white;
-                @include title-shadow-2;
 
-
-
+                // @include text3D-2;
                 span {
-                    background:$black;
-                    @include span-shadow-1;
+                    background: $black;
+                    @include span-shadow-title;
                     font-size: 2em;
                     font-weight: 600;
+                    @include ani-3ms;
                 }
             }
 
-            h3 {
+            h3.case-study-subheading {
                 color: white;
+
                 // @include title-shadow;
                 span {
-                    background:$black;
-                    @include span-shadow-2;
+                    background: $black;
+                    @include span-shadow-subheading;
+                    @include ani-3ms;
                 }
             }
 
+            &:hover {
+                h2.case-study-title {
+                    span.title {
+                        //   box-shadow: 3em 0 0 black, -0.3em 0 0 black;
+                        //   transition-delay: 0s;
+                        @include ani-5ms;
+                        @include span-shadow-title-hover;
+
+                        @include breakpoint(phone) {
+                            //   box-shadow: 0.3em 0 0 black, -5em 0 0 black, 1em 5px 0px $blue, 0 5px 0px $blue,
+                            //   5px 14px 10px rgba(0, 0, 0, 0.15),
+                            //   12px 24px 2px rgba(0, 0, 0, 0.1),
+                            //   18px 34px 30px rgba(0, 0, 0, 0.1);
+                        }
+                    }
+                }
+
+                h3.case-study-subheading {
+                    span {
+                        //   display: inline;
+                        //   transition-delay: 10s;
+                        //   transition: box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                        //   box-shadow: -5em 0 0 black, 1em 0 0 black;
+                        @include span-shadow-subheading-hover;
+                        @include ani-5ms;
+
+                        @include breakpoint(phone) {
+                            // box-shadow: -0.5em 0 0 black, 3em 0 0 black, 5px 14px 10px rgba(0, 0, 0, 0.15),
+                            // 12px 24px 2px rgba(0, 0, 0, 0.1),
+                            // 18px 34px 30px rgba(0, 0, 0, 0.1);
+                        }
+
+
+                    }
+                }
+
+                &+img {
+                    transform: translate(100px, 0px);
+                    @include ani-8ms;
+                    filter: blur(.5px);
+
+
+                    // transition: transform 0.7s $AniCurve;
+                    @include breakpoint(phone) {
+                        // transform: translate(0px, 0px);
+                    }
+                }
+
+                /// img.section-img
+            }
+
+            /// end of hover
         }
-        img {
-            min-width: 110%;
-            height: auto;
+
+        /// End of a.text-container
+        img.section-img {
+            // min-width: 110%;
+            // height: auto;
+            object-fit: cover;
             z-index: 0;
             position: absolute;
-            top:-25px;
-            left:-25px;
+            top: 0;
+            min-height: 110%;
+            min-width: calc(110% + 100px);
+            // top:-25px;
+            // left:-25px;
+            filter: blur(2.5px);
+            transform: translate(0, 0);
+            @include ani-5ms;
         }
+
+        /// img.section-img
 
         div.overlay {
             position: absolute;
-            top:0;
-            left:0;
+            top: 0;
+            left: 0;
             min-height: 100%;
             min-width: 100%;
             z-index: 1;
             box-shadow: rgba(0, 0, 0, 0.4) 1px 10px 20px inset;
 
         }
-        }
+
+        /// div.overlay
+    }
+
+    /// section.case-study-box
 
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Name: Home2
  *
@@ -9,17 +10,17 @@
  */
 
 get_header(); ?>
-<?php get_template_part( 'template-parts/header/site', 'nav' ); ?>
+<?php get_template_part('template-parts/header/site', 'nav'); ?>
 
 
 <main id="swup" class="site-content-contain">
 <p>this is home.php</p>
-<?php get_template_part( 'template-parts/header/blog', 'hero' ); ?>
+<?php get_template_part('template-parts/header/blog', 'hero'); ?>
 	<div id="content" class=" site-content">
 		<div class="case-study wrap">
-			<?php if ( have_posts() ) :
+			<?php if (have_posts()) :
 				/* Start the Loop */
-				while ( have_posts() ) : the_post();?>
+		while (have_posts()) : the_post(); ?>
 					<section class="transition-move-right case-study-box">
 						<a class="text-container" href="
 						<?php the_permalink(); ?>">
@@ -28,19 +29,20 @@ get_header(); ?>
 							</h2>
 
 							<h3 class="case-study-subheading">
-								<span><?php echo get_field( "case_study_subheading" ); ?></span>
+								<span><?php echo get_field("case_study_subheading"); ?></span>
 							</h3>
 
 						</a>
 
-						<div  class="overlay" style="<?php echo get_field( "overlay_background_grad" ); ?>"></div>
+						<div  class="overlay" style="<?php echo get_field("overlay_background_grad"); ?>"></div>
 
-						<img src="<?php $imageLocation = get_the_post_thumbnail_url(get_the_ID(),'large'); echo $imageLocation; ?>">
+						<img class="section-img" src="<?php $imageLocation = get_the_post_thumbnail_url(get_the_ID(), 'large');
+																																			echo $imageLocation; ?>">
 
 					</section>
 				<?php endwhile;
 
-				else : ?>
+			else : ?>
 					<p>There are no posts</p>
 			<?php endif; ?>
 		</div>

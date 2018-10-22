@@ -4,10 +4,9 @@
     //   position: absolute;
     //   right: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
-    padding:50px;
-    padding-bottom: 100px;
+    padding: 0px 50px 30px 50px;
     flex-wrap: wrap;
 
 
@@ -19,8 +18,7 @@
           flex: 0 0 100%;
 
 
-              padding: 0;
-              padding-bottom: 100px;
+
 
       }
 
@@ -40,7 +38,7 @@
           white-space: nowrap;
           //font-family: $bold;
           font-size: 17px;
-          margin: 25px 50px;
+          margin: 5px;
 
           &:hover {
               color: white;

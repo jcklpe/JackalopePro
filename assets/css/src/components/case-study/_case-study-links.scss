@@ -4,14 +4,47 @@ section.case-study-links{
     display: flex;
     min-height: 40vh;
     margin-bottom: 100px;
-    //flex-direction: column;
+
+
+
+    @include breakpoint(phone) {
+        flex-direction: column;
+    }
 
     figure.case-study-box {
     position: relative;
-    //@include border-it(blue);
+
     height: 40vh;
     min-width: 25vw;
     overflow: hidden;
+    @include center-vertical;
+
+    &:hover {
+        min-width: 30vw;
+        a.text-container {
+            h2 {
+                span {
+                @include card-heading-shadow-hover;
+                //padding-left: 2em !important;
+                line-height: 1.6;
+
+                @include ani-3ms;
+                }
+            }
+            h3 {
+                span {
+                    @include card-subhheading-shadow-hover;
+                    @include ani-3ms;
+                }
+            }
+    }
+
+
+    }
+
+    @include breakpoint(phone) {
+        margin: 0;
+    }
 
 
         a.text-container {
@@ -19,17 +52,24 @@ section.case-study-links{
         position: absolute;
         padding: 25px;
         z-index: 5;
+        width: 25vw;
+
+        @include breakpoint(phone) {
+            width: 100vw;
+        }
 
         h2 {
             color: white;
+            font-size: 2em;
 
             span {
                 background:$black;
-                padding: .2em 1.2em .2em .6em;
 
 
-                @include block-small(2px, 1px, 3px);
-                line-height: 1.6
+                @include card-heading-shadow;
+                padding-right: 2em;
+                line-height: 1.6;
+                @include ani-5ms;
             }
         }
 
@@ -40,7 +80,8 @@ section.case-study-links{
                 background:$black;
                 padding: .2em 1em;
 
-                @include block-small(1px, 0px, 1px);
+                @include card-heading-shadow;
+                @include ani-5ms;
                 line-height: 1.6;
             }
         }

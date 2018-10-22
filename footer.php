@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -14,11 +15,11 @@
 ?>
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-    <div id="mc_embed_signup">
+    <div id="mail-chimp-signup">
         <form action="https://the-jackalope.us8.list-manage.com/subscribe/post?u=7fc8ae244460f6dd1c74dd7bf&amp;id=74ff6c880b"
         method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
         novalidate>
-            <div id="mc_embed_signup_scroll">
+            <div id="mail-chimp-signup_scroll">
                 <label for="mce-EMAIL">Subscribe to my newsletter</label>
                 <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="stick your email here"
                     required>

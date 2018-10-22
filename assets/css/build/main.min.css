@@ -3239,29 +3239,36 @@ p > embed:only-child, p > iframe:only-child, p > object:only-child {
 
 .transition-fade {
   transition: .4s;
-  opacity: 1; }
+  opacity: 1;
+  will-change: opacity; }
 
 html.is-animating .transition-fade {
   transition: .4s;
-  opacity: 0 !important; }
+  opacity: 0 !important;
+  will-change: opacity; }
 
 .transition-move-down {
   transition: all .5s;
   opacity: 1 !important;
-  top: 0; }
+  will-change: opacity;
+  transform: translateY(0vh);
+  will-change: opacity, transform; }
 
 html.is-animating .transition-move-down {
   transition: all .4s;
   opacity: 0 !important;
-  top: -70vh; }
+  transform: translateY(-70vh);
+  will-change: opacity, transform; }
 
 .transition-move-right {
   transition: all .5s;
-  opacity: 1 !important; }
+  opacity: 1 !important;
+  will-change: opacity; }
 
 html.is-animating .transition-move-right {
   transition: all .4s;
-  opacity: 0 !important; }
+  opacity: 0 !important;
+  will-change: opacity; }
 
 span.edit-link {
   position: absolute;
@@ -3289,20 +3296,30 @@ div.entry-content {
   padding: 0; }
   .case-study.wrap section.case-study-box {
     position: relative;
-    height: 40vh;
-    overflow: hidden; }
+    height: 60vh;
+    overflow: hidden;
+    clip-path: polygon(0 calc(0% + 10vw), 100% 0, 100% 100%, 0 100%);
+    margin-bottom: -10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    @media (max-width: 767px) {
+      .case-study.wrap section.case-study-box {
+        height: 60vh; } }
     .case-study.wrap section.case-study-box a.text-container {
       display: block;
       position: relative;
+      top: 0px;
       padding: 25px;
       padding-top: 70px;
-      z-index: 5; }
-      .case-study.wrap section.case-study-box a.text-container h2 {
-        color: white;
-        text-shadow: 0 -1px 0px #9ba5a4, 0 0px 1px #a6b3b1, 0 1px 1px #e9f1f1, 0 2px 1px #c7cfce, 0 3px 1px #a5adac, 0 4px 0px #6e7473, 0 5px 0px #424645, 0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3); }
-        .case-study.wrap section.case-study-box a.text-container h2 span {
+      z-index: 5;
+      align-self: flex-start; }
+      .case-study.wrap section.case-study-box a.text-container h2.case-study-title {
+        color: white; }
+        .case-study.wrap section.case-study-box a.text-container h2.case-study-title span {
           background: #141414;
-          box-shadow: 0 0px 1px 1px #141414, 0 5px 2px 1px black, inset 6px 4px 25px 0 #1e231e, 0 14px 20px 0 rgba(0, 0, 0, 0.5), 10px 24px 50px 0 rgba(0, 0, 0, 0.15), 20px 34px 30px rgba(0, 0, 0, 0.1), 2px 6px 47px 0px rgba(0, 0, 0, 0.1) !important;
+          box-shadow: inset 6px 4px 25px 0 #1e231e, 0 0px 0px 0 #1e231e, 0 14px 20px 0 rgba(0, 0, 0, 0.5), 10px 24px 50px 0 rgba(0, 0, 0, 0.15), 20px 34px 30px rgba(0, 0, 0, 0.1), 2px 6px 47px 0px rgba(0, 0, 0, 0.1) !important;
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
           background-color: #0a0a0a;
@@ -3310,18 +3327,20 @@ div.entry-content {
           display: inline;
           padding: 0.3em;
           padding-right: 2em;
+          transform: translate(-1em, 0);
           /* Needs prefixing */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
           border-radius: 0px;
           line-height: 1.9;
           font-size: 2em;
-          font-weight: 600; }
-      .case-study.wrap section.case-study-box a.text-container h3 {
+          font-weight: 600;
+          transition: all 0.3s cubic-bezier(0.84, 0.01, 0.19, 0.93); }
+      .case-study.wrap section.case-study-box a.text-container h3.case-study-subheading {
         color: white; }
-        .case-study.wrap section.case-study-box a.text-container h3 span {
+        .case-study.wrap section.case-study-box a.text-container h3.case-study-subheading span {
           background: #141414;
-          box-shadow: 0 0px 1px 1px #141414, 0 2px 1px 1px black, inset 3px 1px 10px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
+          box-shadow: 0 0px 0px 0px #1e231e, inset 3px 1px 10px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
           padding: .2em;
@@ -3329,14 +3348,50 @@ div.entry-content {
           /* Needs prefixing */
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
-          line-height: 1.8; }
-    .case-study.wrap section.case-study-box img {
-      min-width: 110%;
-      height: auto;
+          line-height: 1.8;
+          transition: all 0.3s cubic-bezier(0.84, 0.01, 0.19, 0.93); }
+      .case-study.wrap section.case-study-box a.text-container:hover h2.case-study-title span.title {
+        transition: all 0.5s cubic-bezier(0.84, 0.01, 0.19, 0.93);
+        box-shadow: inset 6px 4px 25px 0 #1e231e, -1em 0px 0px 0px #191a19, 0 0px 0px 0 rgba(0, 0, 0, 0.5), 0px 0px 0px 0 rgba(0, 0, 0, 0.15), 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.1) !important;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        background-color: #0a0a0a;
+        color: #fff;
+        display: inline;
+        padding: 0.3em;
+        padding-right: 3em;
+        padding-left: .6em;
+        /* Needs prefixing */
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        border-radius: 0px;
+        line-height: 1.9; }
+      .case-study.wrap section.case-study-box a.text-container:hover h3.case-study-subheading span {
+        box-shadow: -2em 0px 0px 0px #0f110f, inset 0px 1px 0px 0 #1e231e, 0 0px 0px 0 rgba(0, 0, 0, 0.3), 0px 0px 0px 0 rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.09), 0px 0px 0px 0px rgba(0, 0, 0, 0.09) !important;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        padding: .2em;
+        padding-right: 1em;
+        padding-left: .5em;
+        /* Needs prefixing */
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        line-height: 1.8;
+        transition: all 0.5s cubic-bezier(0.84, 0.01, 0.19, 0.93); }
+      .case-study.wrap section.case-study-box a.text-container:hover + img {
+        transform: translate(100px, 0px);
+        transition: all 0.8s cubic-bezier(0.84, 0.01, 0.19, 0.93);
+        filter: blur(0.5px); }
+    .case-study.wrap section.case-study-box img.section-img {
+      object-fit: cover;
       z-index: 0;
       position: absolute;
-      top: -25px;
-      left: -25px; }
+      top: 0;
+      min-height: 110%;
+      min-width: calc(110% + 100px);
+      filter: blur(2.5px);
+      transform: translate(0, 0);
+      transition: all 0.5s cubic-bezier(0.84, 0.01, 0.19, 0.93); }
     .case-study.wrap section.case-study-box div.overlay {
       position: absolute;
       top: 0;
@@ -3362,8 +3417,10 @@ div#content div.wrap-post {
   position: relative;
   top: -200px;
   z-index: 5;
-  border-radius: 2px;
-  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important; }
+  border-radius: 2px; }
+  @media (max-width: 767px) {
+    div#content div.wrap-post {
+      top: 0; } }
   div#content div.wrap-post #primary.content-area {
     width: 100% !important;
     float: none; }
@@ -3382,10 +3439,14 @@ div.entry-content > h2 {
   top: -50px;
   font-size: 2.5em;
   font-weight: 600;
-  box-shadow: 0 0px 1px 1px #141414, 0 2px 1px 1px black, inset 3px 5px 15px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 0px 0px 0px #1e231e, inset 3px 5px 15px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
   box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-  text-shadow: 0 -1px 0px #9ba5a4, 0 0px 1px #a6b3b1, 0 1px 1px #e9f1f1, 0 2px 1px #c7cfce, 0 3px 1px #a5adac, 0 4px 0px #6e7473, 0 5px 0px #424645, 0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3); }
+  -webkit-box-decoration-break: clone; }
+  @media (max-width: 767px) {
+    div.entry-content > h2 {
+      margin-left: 0;
+      padding-left: 1em;
+      padding-right: 1em; } }
 
 div.entry-content h3 {
   background: #141414;
@@ -3398,41 +3459,98 @@ div.entry-content h3 {
   margin-left: -1em;
   position: relative;
   font-size: 1.2em;
-  box-shadow: 0 0px 1px 1px #141414, 0 2px 1px 1px black, inset 2px 2px 5px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 0px 0px 0px #1e231e, inset 2px 2px 5px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone; }
+
+.ab-block-container.container-1 {
+  border: 3px solid red; }
 
 section.case-study-links {
   display: flex;
   min-height: 40vh;
   margin-bottom: 100px; }
+  @media (max-width: 767px) {
+    section.case-study-links {
+      flex-direction: column; } }
   section.case-study-links figure.case-study-box {
     position: relative;
     height: 40vh;
     min-width: 25vw;
-    overflow: hidden; }
+    overflow: hidden;
+    display: flex;
+    align-items: center; }
+    section.case-study-links figure.case-study-box:hover {
+      min-width: 30vw; }
+      section.case-study-links figure.case-study-box:hover a.text-container h2 span {
+        box-shadow: -2em 0px 0px 0px #0f110f, inset 0px 1px 0px 0 #1e231e, 0 0px 0px 0 rgba(0, 0, 0, 0.3), 0px 0px 0px 0 rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.09), 0px 0px 0px 0px rgba(0, 0, 0, 0.09) !important;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        padding: .2em;
+        padding-right: 1em;
+        padding-left: .5em;
+        /* Needs prefixing */
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        line-height: 1.8;
+        line-height: 1.6;
+        transition: all 0.3s cubic-bezier(0.84, 0.01, 0.19, 0.93); }
+      section.case-study-links figure.case-study-box:hover a.text-container h3 span {
+        box-shadow: inset 0px 1px 0px 0 #1e231e, 0 0px 0px 0 rgba(0, 0, 0, 0.3), 0px 0px 0px 0 rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.09), 0px 0px 0px 0px rgba(0, 0, 0, 0.09) !important;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        transition: all 0.5s cubic-bezier(0.84, 0.01, 0.19, 0.93);
+        padding: .2em;
+        padding-right: 3em;
+        /* Needs prefixing */
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        line-height: 1.8;
+        transition: all 0.3s cubic-bezier(0.84, 0.01, 0.19, 0.93); }
+    @media (max-width: 767px) {
+      section.case-study-links figure.case-study-box {
+        margin: 0; } }
     section.case-study-links figure.case-study-box a.text-container {
       display: block;
       position: absolute;
       padding: 25px;
-      z-index: 5; }
+      z-index: 5;
+      width: 25vw; }
+      @media (max-width: 767px) {
+        section.case-study-links figure.case-study-box a.text-container {
+          width: 100vw; } }
       section.case-study-links figure.case-study-box a.text-container h2 {
-        color: white; }
+        color: white;
+        font-size: 2em; }
         section.case-study-links figure.case-study-box a.text-container h2 span {
           background: #141414;
-          padding: .2em 1.2em .2em .6em;
-          box-shadow: 0 0px 1px 1px #141414, 0 2px 1px 1px black, inset 2px 1px 3px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
+          box-shadow: 0 0px 0px 0px #1e231e, inset 1px 1px 4px 0 #1e231e, 0 3px 5px 0 rgba(0, 0, 0, 0.3), 2px 5px 5px 0 rgba(0, 0, 0, 0.1), 5px 5px 3px rgba(0, 0, 0, 0.09), 1px 2px 6px 0px rgba(0, 0, 0, 0.09) !important;
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
-          line-height: 1.6; }
+          padding: .2em;
+          padding-right: 3em;
+          /* Needs prefixing */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          line-height: 1.8;
+          padding-right: 2em;
+          line-height: 1.6;
+          transition: all 0.5s cubic-bezier(0.84, 0.01, 0.19, 0.93); }
       section.case-study-links figure.case-study-box a.text-container h3 {
         color: white; }
         section.case-study-links figure.case-study-box a.text-container h3 span {
           background: #141414;
           padding: .2em 1em;
-          box-shadow: 0 0px 1px 1px #141414, 0 2px 1px 1px black, inset 1px 0px 1px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
+          box-shadow: 0 0px 0px 0px #1e231e, inset 1px 1px 4px 0 #1e231e, 0 3px 5px 0 rgba(0, 0, 0, 0.3), 2px 5px 5px 0 rgba(0, 0, 0, 0.1), 5px 5px 3px rgba(0, 0, 0, 0.09), 1px 2px 6px 0px rgba(0, 0, 0, 0.09) !important;
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
+          padding: .2em;
+          padding-right: 3em;
+          /* Needs prefixing */
+          box-decoration-break: clone;
+          -webkit-box-decoration-break: clone;
+          line-height: 1.8;
+          transition: all 0.5s cubic-bezier(0.84, 0.01, 0.19, 0.93);
           line-height: 1.6; }
     section.case-study-links figure.case-study-box img {
       object-fit: cover;
@@ -3476,7 +3594,7 @@ section.case-study-links {
   display: block; }
   .main-navigation ul {
     background: #141414;
-    box-shadow: 0 0px 1px 1px #141414, 0 2px 1px 1px black, inset 2px 2px 10px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
+    box-shadow: 0 0px 0px 0px #1e231e, inset 2px 2px 10px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     list-style: none;
@@ -3607,44 +3725,45 @@ footer#colophon.site-footer {
   margin-top: -1px !important;
   background: black !important; }
 
-div#mc_embed_signup {
-  padding: 75px 5px 70px 10px;
+div#mail-chimp-signup {
+  padding: 75px 5px 100px 10px;
   background-color: black !important;
   color: white;
   display: flex;
+  margin-top: 10vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-right: auto; }
   @media (max-width: 767px) {
-    div#mc_embed_signup {
+    div#mail-chimp-signup {
       padding: 75px 0 70px 0;
       padding-bottom: 0; } }
   @media (max-width: 767px) {
-    div#mc_embed_signup form {
+    div#mail-chimp-signup form {
       width: 100%;
       margin-bottom: 80px; } }
-  div#mc_embed_signup form div#mc_embed_signup_scroll label {
+  div#mail-chimp-signup form div#mail-chimp-signup_scroll label {
     text-align: left;
     font-weight: bolder;
     font-size: 4em;
     margin-left: -50px;
     color: white; }
     @media (max-width: 767px) {
-      div#mc_embed_signup form div#mc_embed_signup_scroll label {
+      div#mail-chimp-signup form div#mail-chimp-signup_scroll label {
         margin-left: 10px;
         text-align: center;
         margin-bottom: 35px; } }
-  div#mc_embed_signup form div#mc_embed_signup_scroll input.email {
+  div#mail-chimp-signup form div#mail-chimp-signup_scroll input.email {
     border-radius: 0px !important;
     border: none;
     padding: 25px 10px;
     min-width: 50vw; }
     @media (max-width: 767px) {
-      div#mc_embed_signup form div#mc_embed_signup_scroll input.email {
+      div#mail-chimp-signup form div#mail-chimp-signup_scroll input.email {
         height: 80px;
         margin-bottom: -1px; } }
-  div#mc_embed_signup form div#mc_embed_signup_scroll div.clear input.sign-up-button {
+  div#mail-chimp-signup form div#mail-chimp-signup_scroll div.clear input.sign-up-button {
     background: yellow;
     border-radius: 0 !important;
     color: black;
@@ -3654,22 +3773,22 @@ div#mc_embed_signup {
     height: 52px;
     padding: 0 25px; }
     @media (max-width: 767px) {
-      div#mc_embed_signup form div#mc_embed_signup_scroll div.clear input.sign-up-button {
+      div#mail-chimp-signup form div#mail-chimp-signup_scroll div.clear input.sign-up-button {
         width: 100vw;
         height: 120px;
         margin-bottom: 0; } }
-    div#mc_embed_signup form div#mc_embed_signup_scroll div.clear input.sign-up-button:hover {
+    div#mail-chimp-signup form div#mail-chimp-signup_scroll div.clear input.sign-up-button:hover {
       background: #141414 !important;
       border-radius: 0px !important;
       color: white;
       font-size: 25px !important;
       transition: all 0.3s cubic-bezier(0.84, 0.01, 0.19, 0.93) !important; }
-    div#mc_embed_signup form div#mc_embed_signup_scroll div.clear input.sign-up-button:active {
+    div#mail-chimp-signup form div#mail-chimp-signup_scroll div.clear input.sign-up-button:active {
       background: #2657eb !important; }
-    div#mc_embed_signup form div#mc_embed_signup_scroll div.clear input.sign-up-button:focus {
+    div#mail-chimp-signup form div#mail-chimp-signup_scroll div.clear input.sign-up-button:focus {
       background: #2657eb !important; }
 
-#mc_embed_signup form {
+#mail-chimp-signup form {
   text-align: center;
   padding: 10px 0 10px 0; }
 
@@ -3677,7 +3796,7 @@ div#mc_embed_signup {
   display: inline-block; }
 
 /* positions input field horizontally */
-#mc_embed_signup input.email {
+#mail-chimp-signup input.email {
   font-size: 1em;
   border: 1px solid #ABB0B2;
   color: #343434;
@@ -3690,16 +3809,16 @@ div#mc_embed_signup {
   width: 350px;
   vertical-align: top; }
 
-#mc_embed_signup label {
+#mail-chimp-signup label {
   display: block;
   font-size: 16px;
   padding-bottom: 10px;
   font-weight: bold; }
 
-#mc_embed_signup .clear {
+#mail-chimp-signup .clear {
   display: inline-block; }
 
-#mc_embed_signup .button {
+#mail-chimp-signup .button {
   font-size: 13px;
   border: none;
   -webkit-border-radius: 3px;
@@ -3715,11 +3834,11 @@ div#mc_embed_signup {
   display: inline-block;
   margin: 0;
   transition: all 0.23s ease-in-out 0s; }
-  #mc_embed_signup .button:hover {
+  #mail-chimp-signup .button:hover {
     background-color: #777;
     cursor: pointer; }
 
-#mc_embed_signup div#mce-responses {
+#mail-chimp-signup div#mce-responses {
   float: left;
   top: -1.4em;
   padding: 0em .5em 0em .5em;
@@ -3728,7 +3847,7 @@ div#mc_embed_signup {
   margin: 0 5%;
   clear: both; }
 
-#mc_embed_signup div.response {
+#mail-chimp-signup div.response {
   margin: 1em 0;
   padding: 1em .5em .5em 0;
   font-weight: bold;
@@ -3737,14 +3856,14 @@ div#mc_embed_signup {
   z-index: 1;
   width: 80%; }
 
-#mc_embed_signup #mce-error-response {
+#mail-chimp-signup #mce-error-response {
   display: none; }
 
-#mc_embed_signup #mce-success-response {
+#mail-chimp-signup #mce-success-response {
   color: #529214;
   display: none; }
 
-#mc_embed_signup label.error {
+#mail-chimp-signup label.error {
   display: block;
   float: none;
   width: auto;
@@ -3754,30 +3873,27 @@ div#mc_embed_signup {
 
 /* positions button horizontally in line with input */
 @media (max-width: 768px) {
-  #mc_embed_signup input.email {
+  #mail-chimp-signup input.email {
     width: 100%;
     margin-bottom: 5px; }
-  #mc_embed_signup .clear {
+  #mail-chimp-signup .clear {
     display: block;
     width: 100%; }
-  #mc_embed_signup .button {
+  #mail-chimp-signup .button {
     width: 100%;
     margin: 0; } }
 
 div.footer-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
-  padding: 50px;
-  padding-bottom: 100px;
+  padding: 0px 50px 30px 50px;
   flex-wrap: wrap; }
   @media (max-width: 767px) {
     div.footer-links {
       position: relative;
       right: 0;
-      flex: 0 0 100%;
-      padding: 0;
-      padding-bottom: 100px; } }
+      flex: 0 0 100%; } }
   div.footer-links a {
     background: black;
     line-height: 1.7;
@@ -3793,7 +3909,7 @@ div.footer-links {
     text-decoration: none;
     white-space: nowrap;
     font-size: 17px;
-    margin: 25px 50px; }
+    margin: 5px; }
     div.footer-links a:hover {
       color: white; }
     div.footer-links a:focus {
@@ -3824,6 +3940,7 @@ section.hero {
   align-items: center;
   justify-content: center;
   height: 90vh;
+  margin-bottom: -10vw;
   overflow: hidden;
   background: #141414 !important; }
   section.hero div.overlay {
@@ -3840,7 +3957,7 @@ section.hero {
     text-align: center; }
     section.hero h1.case-study.title span {
       background: #141414;
-      box-shadow: 0 0px 1px 1px #141414, 0 5px 2px 1px black, inset 6px 4px 25px 0 #1e231e, 0 14px 20px 0 rgba(0, 0, 0, 0.5), 10px 24px 50px 0 rgba(0, 0, 0, 0.15), 20px 34px 30px rgba(0, 0, 0, 0.1), 2px 6px 47px 0px rgba(0, 0, 0, 0.1) !important;
+      box-shadow: inset 1px 2px 30px 0 #1e231e, 0 0px 0px 0 #1e231e, 0 14px 20px 0 rgba(0, 0, 0, 0.5), 10px 24px 50px 0 rgba(0, 0, 0, 0.15), 20px 34px 30px rgba(0, 0, 0, 0.1), 2px 6px 47px 0px rgba(0, 0, 0, 0.1) !important;
       box-decoration-break: clone;
       -webkit-box-decoration-break: clone;
       background-color: #0a0a0a;
@@ -3852,12 +3969,16 @@ section.hero {
       -webkit-box-decoration-break: clone;
       border-radius: 1px;
       line-height: 1.9; }
+    @media (max-width: 767px) {
+      section.hero h1.case-study.title {
+        top: 50px; } }
   section.hero div.img-container {
     width: 100%;
     height: 100%; }
     section.hero div.img-container img.hero-img {
       object-fit: cover;
-      max-width: 150%; }
+      min-height: 100%;
+      min-width: 100%; }
 
 .single-featured-image-header {
   border: none !important; }
@@ -3865,7 +3986,7 @@ section.hero {
 a.wp-block-button__link {
   border-radius: 0px !important;
   background: #141414 !important;
-  box-shadow: 0 0px 1px 1px #141414, 0 2px 1px 1px black, inset 2px 2px 10px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 0px 0px 0px #1e231e, inset 2px 2px 10px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone; }
 
@@ -3873,7 +3994,7 @@ ul.ab-social-links li a {
   background: #141414 !important; }
   ul.ab-social-links li a i {
     background: #141414 !important;
-    box-shadow: 0 0px 1px 1px #141414, 0 2px 1px 1px black, inset 1px 1px 3px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
+    box-shadow: 0 0px 0px 0px #1e231e, inset 1px 1px 3px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone; }
 

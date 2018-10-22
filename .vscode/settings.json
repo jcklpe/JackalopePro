@@ -52,5 +52,6 @@
             "id": "PWRSh2dXF4sBycDK",
             "label": "CSS"
         }
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
