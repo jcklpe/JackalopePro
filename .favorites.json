@@ -5,7 +5,8 @@
         "parent_id": null,
         "workspacePath": null,
         "id": "bjvNMzJfmCUB5yl6",
-        "workspaceRoot": null
+        "workspaceRoot": null,
+        "fsPath": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\webpack.config.js"
     },
     {
         "type": "File",
@@ -13,7 +14,8 @@
         "parent_id": null,
         "workspacePath": null,
         "id": "kUsnzAmGCtEHfXpJ",
-        "workspaceRoot": null
+        "workspaceRoot": null,
+        "fsPath": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\package.json"
     },
     {
         "type": "File",
@@ -21,7 +23,8 @@
         "parent_id": null,
         "workspacePath": null,
         "id": "GkrQwMzAxlFXh43S",
-        "workspaceRoot": null
+        "workspaceRoot": null,
+        "fsPath": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\index.php"
     },
     {
         "type": "Directory",
@@ -29,7 +32,8 @@
         "parent_id": null,
         "workspacePath": null,
         "id": "WKwAT0cvapGONoJe",
-        "workspaceRoot": null
+        "workspaceRoot": null,
+        "fsPath": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\assets\\js"
     },
     {
         "type": "File",
@@ -37,7 +41,8 @@
         "parent_id": null,
         "workspacePath": null,
         "id": "t3xdHqwMiWoV6C8m",
-        "workspaceRoot": null
+        "workspaceRoot": null,
+        "fsPath": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\node_modules\\swup\\dist\\my.swup.js"
     },
     {
         "type": "Directory",
@@ -45,7 +50,8 @@
         "parent_id": null,
         "workspacePath": null,
         "id": "2l51SgvAXzORVBFM",
-        "workspaceRoot": null
+        "workspaceRoot": null,
+        "fsPath": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\template-parts"
     },
     {
         "type": "Directory",
@@ -54,6 +60,7 @@
         "workspacePath": null,
         "id": "PWRSh2dXF4sBycDK",
         "label": "CSS",
-        "workspaceRoot": null
+        "workspaceRoot": null,
+        "fsPath": "c:\\Users\\David\\Work\\Code\\JackalopePortfolio\\Pro\\apps\\wordpress\\htdocs\\wp-content\\themes\\JackalopePro\\assets\\css\\src"
     }
 ]

@@ -1,35 +1,43 @@
 //- Mixins and utilities
 
-    //-add  border
+//-add  border
 @mixin border-it($color) {
-    border: 3px solid $color;
-    }
+  border: 3px solid $color;
+}
 
-    //-Responsive Mixins
+//-Responsive Mixins
 @mixin breakpoint($class) {
-    @if $class == phone {
-      @media (max-width: 767px) { @content; }
+  @if $class==phone {
+    @media (max-width: 767px) {
+      @content;
     }
+  }
 
-    @else if $class == tablet {
-      @media (min-width: 768px) { @content; }
+  @else if $class==tablet {
+    @media (min-width: 768px) {
+      @content;
     }
+  }
 
-    @else if $class == desktop {
-      @media (min-width: 992px) { @content; }
+  @else if $class==desktop {
+    @media (min-width: 992px) {
+      @content;
     }
+  }
 
-    @else if $class == desktopLG {
-      @media (min-width: 1200px) { @content; }
+  @else if $class==desktopLG {
+    @media (min-width: 1200px) {
+      @content;
     }
+  }
 
-    @else {
-      @warn "Breakpoint mixin supports: phone, tablet, desktop, desktopLG";
-    }
+  @else {
+    @warn "Breakpoint mixin supports: phone, tablet, desktop, desktopLG";
+  }
 }
 
 @mixin center-flex {
-  display:flex;
+  display: flex;
   flex-direction: column;
   // justify-content: center;
   align-items: center;
@@ -37,7 +45,7 @@
 }
 
 @mixin center-vertical {
-  display:flex;
+  display: flex;
   // justify-content: center;
   align-items: center;
 }
@@ -68,7 +76,7 @@
     0 20px 20px rgba(0, 0, 0, 0.3);
 }
 
-@mixin text3D-2{
+@mixin text3D-2 {
   text-shadow:
     0 -1px 0px rgb(155, 165, 164),
     0 0px 1px rgb(166, 179, 177),
@@ -78,12 +86,12 @@
     0 4px 0px rgb(110, 116, 115),
     0 5px 0px rgb(66, 70, 69),
 
-    0 0 5px rgba(0,0,0,.05),
-    0 1px 3px rgba(0,0,0,.2),
-    0 3px 5px rgba(0,0,0,.2),
-    0 5px 10px rgba(0,0,0,.2),
-    0 10px 10px rgba(0,0,0,.2),
-    0 20px 20px rgba(0,0,0,.3);
+    0 0 5px rgba(0, 0, 0, .05),
+    0 1px 3px rgba(0, 0, 0, .2),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 5px 10px rgba(0, 0, 0, .2),
+    0 10px 10px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .3);
 
 }
 
@@ -91,34 +99,33 @@
 //- Block title and Hero title
 @mixin block-title($x-axis, $y-axis, $blur) {
   box-shadow:
-                  // 0 0px 1px 1px rgb(20, 20, 20),
-                  inset $x-axis $y-axis $blur 0 rgb(30, 35, 30),
-                  0 0px 0px 0 rgba(30, 35, 30,1), //padding
-                  0 14px 20px 0 rgba(0, 0, 0, 0.5),
-                  10px 24px 50px 0 rgba(0, 0, 0, 0.15),
-                  20px 34px 30px rgba(0, 0, 0, 0.1),
-                  2px 6px 47px 0px rgba(0, 0, 0, 0.1) !important;
+    // 0 0px 1px 1px rgb(20, 20, 20),
+    inset $x-axis $y-axis $blur 0 rgb(30, 35, 30),
+    0 0px 0px 0 rgba(30, 35, 30, 1), //padding
+    0 14px 20px 0 rgba(0, 0, 0, 0.5),
+    10px 24px 50px 0 rgba(0, 0, 0, 0.15),
+    20px 34px 30px rgba(0, 0, 0, 0.1),
+    2px 6px 47px 0px rgba(0, 0, 0, 0.1) !important;
 
-                  box-decoration-break: clone;
-                  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 
 
 }
 
 @mixin block-title-hover($x-axis, $y-axis, $blur) {
   box-shadow:
-                  // 0 0px 1px 1px rgb(20, 20, 20),
+    // 0 0px 1px 1px rgb(20, 20, 20),
 
-                  inset $x-axis $y-axis $blur 0 rgb(30, 35, 30),
-                  -1em 0px 0px 0px rgba(25, 26, 25,1), //padding
-                  0 0px 0px 0 rgba(0, 0, 0, 0.5),
-                  0px 0px 0px 0 rgba(0, 0, 0, 0.15),
-                  0px 0px 0px rgba(0, 0, 0, 0.1),
-                  0px 0px 0px 0px rgba(0, 0, 0, 0.1)
-                  !important;
+    inset $x-axis $y-axis $blur 0 rgb(30, 35, 30),
+    -1em 0px 0px 0px rgba(25, 26, 25, 1), //padding
+    0 0px 0px 0 rgba(0, 0, 0, 0.5),
+    0px 0px 0px 0 rgba(0, 0, 0, 0.15),
+    0px 0px 0px rgba(0, 0, 0, 0.1),
+    0px 0px 0px 0px rgba(0, 0, 0, 0.1) !important;
 
-                  box-decoration-break: clone;
-                  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 
 
 }
@@ -126,7 +133,7 @@
 @mixin span-shadow-hero {
   @include block-title(1px, 2px, 30px);
 
-  background-color: rgb(10,10,10);
+  background-color: rgb(10, 10, 10);
   color: #fff;
   display: inline;
   padding: 0.3em;
@@ -141,7 +148,7 @@
 @mixin span-shadow-title {
   @include block-title(6px, 4px, 25px);
 
-  background-color: rgb(10,10,10);
+  background-color: rgb(10, 10, 10);
   color: #fff;
   display: inline;
   padding: 0.3em;
@@ -157,52 +164,52 @@
 }
 
 @mixin span-shadow-title-hover {
-@include block-title-hover(6px, 4px, 25px);
+  @include block-title-hover(6px, 4px, 25px);
 
-background-color: rgb(10,10,10);
-color: #fff;
-display: inline;
-padding: 0.3em;
-padding-right: 3em;
-padding-left: .6em;
-// padding-left: 1em;
-/* Needs prefixing */
-box-decoration-break: clone;
--webkit-box-decoration-break: clone;
-border-radius: 0px;
-line-height: 1.9;
+  background-color: rgb(10, 10, 10);
+  color: #fff;
+  display: inline;
+  padding: 0.3em;
+  padding-right: 3em;
+  padding-left: .6em;
+  // padding-left: 1em;
+  /* Needs prefixing */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  border-radius: 0px;
+  line-height: 1.9;
 }
 
 
 //- Subheading
 @mixin block-subheading($x-axis, $y-axis, $blur) {
   box-shadow:
-                  // 0 0px 1px 1px rgb(20, 20, 20),
-                  0 0px 0px 0px rgba(30, 35, 30, 1),
-                  inset $x-axis $y-axis $blur 0 rgb(30 , 35 , 30),
-                  0 7px 10px 0 rgba(0, 0, 0, 0.3),
-                  5px 10px 10px 0 rgba(0, 0, 0, 0.1),
-                  10px 12px 8px rgba(0, 0, 0, 0.09),
-                  1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
+    // 0 0px 1px 1px rgb(20, 20, 20),
+    0 0px 0px 0px rgba(30, 35, 30, 1),
+    inset $x-axis $y-axis $blur 0 rgb(30, 35, 30),
+    0 7px 10px 0 rgba(0, 0, 0, 0.3),
+    5px 10px 10px 0 rgba(0, 0, 0, 0.1),
+    10px 12px 8px rgba(0, 0, 0, 0.09),
+    1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
 
-                  box-decoration-break: clone;
-                  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 
 
 }
 
 @mixin block-subheading-hover($x-axis, $y-axis, $blur) {
   box-shadow:
-                  // 0 0px 1px 1px rgb(20, 20, 20),
-                  -2em 0px 0px 0px rgba(15, 17, 15, 1),
-                  inset $x-axis $y-axis $blur 0 rgb(30 , 35 , 30),
-                  0 0px 0px 0 rgba(0, 0, 0, 0.3),
-                  0px 0px 0px 0 rgba(0, 0, 0, 0.1),
-                  0px 0px 0px rgba(0, 0, 0, 0.09),
-                  0px 0px 0px 0px rgba(0, 0, 0, 0.09) !important;
+    // 0 0px 1px 1px rgb(20, 20, 20),
+    -2em 0px 0px 0px rgba(15, 17, 15, 1),
+    inset $x-axis $y-axis $blur 0 rgb(30, 35, 30),
+    0 0px 0px 0 rgba(0, 0, 0, 0.3),
+    0px 0px 0px 0 rgba(0, 0, 0, 0.1),
+    0px 0px 0px rgba(0, 0, 0, 0.09),
+    0px 0px 0px 0px rgba(0, 0, 0, 0.09) !important;
 
-                  box-decoration-break: clone;
-                  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 
 
 }
@@ -210,39 +217,39 @@ line-height: 1.9;
 @mixin span-shadow-subheading {
   @include block-subheading(3px, 1px, 10px);
 
-                  padding: .2em;
-                  padding-right: 3em;
-                  /* Needs prefixing */
-                  box-decoration-break: clone;
-                  -webkit-box-decoration-break: clone;
-                  line-height: 1.8;
+  padding: .2em;
+  padding-right: 3em;
+  /* Needs prefixing */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  line-height: 1.8;
 }
 
 @mixin span-shadow-subheading-hover {
   @include block-subheading-hover(0px, 1px, 0px);
 
-                  padding: .2em;
-                  padding-right: 1em;
-                  padding-left: .5em;
-                  /* Needs prefixing */
-                  box-decoration-break: clone;
-                  -webkit-box-decoration-break: clone;
-                  line-height: 1.8;
+  padding: .2em;
+  padding-right: 1em;
+  padding-left: .5em;
+  /* Needs prefixing */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  line-height: 1.8;
 }
 
 //- Cardview Headings
 @mixin card-heading($x-axis, $y-axis, $blur) {
   box-shadow:
-                  // 0 0px 1px 1px rgb(20, 20, 20),
-                  0 0px 0px 0px rgba(30, 35, 30, 1),
-                  inset $x-axis $y-axis $blur 0 rgb(30 , 35 , 30),
-                  0 3px 5px 0 rgba(0, 0, 0, 0.3),
-                  2px 5px 5px 0 rgba(0, 0, 0, 0.1),
-                  5px 5px 3px rgba(0, 0, 0, 0.09),
-                  1px 2px 6px 0px rgba(0, 0, 0, 0.09) !important;
+    // 0 0px 1px 1px rgb(20, 20, 20),
+    0 0px 0px 0px rgba(30, 35, 30, 1),
+    inset $x-axis $y-axis $blur 0 rgb(30, 35, 30),
+    0 3px 5px 0 rgba(0, 0, 0, 0.3),
+    2px 5px 5px 0 rgba(0, 0, 0, 0.1),
+    5px 5px 3px rgba(0, 0, 0, 0.09),
+    1px 2px 6px 0px rgba(0, 0, 0, 0.09) !important;
 
-                  box-decoration-break: clone;
-                  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 
 
 }
@@ -252,27 +259,27 @@ line-height: 1.9;
 @mixin card-heading-shadow {
   @include card-heading(1px, 1px, 4px);
 
-                  padding: .2em;
-                  padding-right: 3em;
-                  /* Needs prefixing */
-                  box-decoration-break: clone;
-                  -webkit-box-decoration-break: clone;
-                  line-height: 1.8;
+  padding: .2em;
+  padding-right: 3em;
+  /* Needs prefixing */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  line-height: 1.8;
 }
 
 
 @mixin card-heading-hover($x-axis, $y-axis, $blur) {
   box-shadow:
-                  // 0 0px 1px 1px rgb(20, 20, 20),
-                  -2em 0px 0px 0px rgba(15, 17, 15, 1),
-                  inset $x-axis $y-axis $blur 0 rgb(30 , 35 , 30),
-                  0 0px 0px 0 rgba(0, 0, 0, 0.3),
-                  0px 0px 0px 0 rgba(0, 0, 0, 0.1),
-                  0px 0px 0px rgba(0, 0, 0, 0.09),
-                  0px 0px 0px 0px rgba(0, 0, 0, 0.09) !important;
+    // 0 0px 1px 1px rgb(20, 20, 20),
+    -2em 0px 0px 0px rgba(15, 17, 15, 1),
+    inset $x-axis $y-axis $blur 0 rgb(30, 35, 30),
+    0 0px 0px 0 rgba(0, 0, 0, 0.3),
+    0px 0px 0px 0 rgba(0, 0, 0, 0.1),
+    0px 0px 0px rgba(0, 0, 0, 0.09),
+    0px 0px 0px 0px rgba(0, 0, 0, 0.09) !important;
 
-                  box-decoration-break: clone;
-                  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 
 
 }
@@ -280,26 +287,26 @@ line-height: 1.9;
 @mixin card-heading-shadow-hover {
   @include card-heading-hover(0px, 1px, 0px);
 
-                  padding: .2em;
-                  padding-right: 1em;
-                  padding-left: .5em;
-                  /* Needs prefixing */
-                  box-decoration-break: clone;
-                  -webkit-box-decoration-break: clone;
-                  line-height: 1.8;
+  padding: .2em;
+  padding-right: 1em;
+  padding-left: .5em;
+  /* Needs prefixing */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  line-height: 1.8;
 }
 
 @mixin card-subheading-hover($x-axis, $y-axis, $blur) {
   box-shadow:
-                  // 0 0px 1px 1px rgb(20, 20, 20),
-                  inset $x-axis $y-axis $blur 0 rgb(30 , 35 , 30),
-                  0 0px 0px 0 rgba(0, 0, 0, 0.3),
-                  0px 0px 0px 0 rgba(0, 0, 0, 0.1),
-                  0px 0px 0px rgba(0, 0, 0, 0.09),
-                  0px 0px 0px 0px rgba(0, 0, 0, 0.09) !important;
+    // 0 0px 1px 1px rgb(20, 20, 20),
+    inset $x-axis $y-axis $blur 0 rgb(30, 35, 30),
+    0 0px 0px 0 rgba(0, 0, 0, 0.3),
+    0px 0px 0px 0 rgba(0, 0, 0, 0.1),
+    0px 0px 0px rgba(0, 0, 0, 0.09),
+    0px 0px 0px 0px rgba(0, 0, 0, 0.09) !important;
 
-                  box-decoration-break: clone;
-                  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 
 
 }
@@ -308,12 +315,12 @@ line-height: 1.9;
   @include card-subheading-hover(0px, 1px, 0px);
   @include ani-5ms;
 
-                  padding: .2em;
-                  padding-right: 3em;
-                  /* Needs prefixing */
-                  box-decoration-break: clone;
-                  -webkit-box-decoration-break: clone;
-                  line-height: 1.8;
+  padding: .2em;
+  padding-right: 3em;
+  /* Needs prefixing */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  line-height: 1.8;
 }
 
 
@@ -322,7 +329,19 @@ line-height: 1.9;
 
 @mixin hardware($backface: true, $perspective: 1000) {
   @if $backface {
-      backface-visibility: hidden;
+    backface-visibility: hidden;
   }
+
   perspective: $perspective;
+}
+
+@mixin simple-link($color) {
+  box-shadow: inset 0 -1px 0 $color;
+  transition: color 80ms ease-in, box-shadow 130ms $AniCurve;
+
+  &:focus,
+  &:hover {
+    color: $color;
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 $color;
+  }
 }

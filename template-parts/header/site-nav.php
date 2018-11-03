@@ -1,17 +1,15 @@
 <?php
-/**
-* Displays header site branding
-*
-* @package JackalopePro
-* @since 1.0
-* @version 1.2
-*/
 
-if ( has_nav_menu( 'top' ) ) : ?>
-    <div class="navigation-top">
-        <div class="wrap">
-            <!-- test comment -->
-            <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-        </div>
-    </div>
-<?php endif; ?>
+/**
+ * Displays header site branding
+ *
+ * @package JackalopePro
+ * @since 1.0
+ * @version 1.2
+ */
+?>
+
+<nav  class="nav" role="navigation">
+    <a class="nav-link" href="<?php echo get_home_url(); ?>/">Home</a>
+    <a class="nav-link" href="<?php echo get_home_url(); ?>/about/">About/Contact</a>
+</nav>

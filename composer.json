@@ -1,0 +1,18 @@
+{
+    "name": "Theme Package",
+    "authors": [{
+        "name": "jcklpe",
+        "email": "david@jackalope.tech"
+    }],
+    "description": "a boilerplate composer file to get me used to using composer more",
+    "type": "wp-theme",
+    "require-dev": {
+        // I don't have any composer deps yet, but I want to start thinking in those terms
+    },
+
+
+    "require": {
+
+        // example format =>"twig/twig": "1.18.0"
+    }
+}
