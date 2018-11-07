@@ -3291,10 +3291,14 @@ div.entry-content {
 .ab-profile-column.ab-profile-avatar-wrap {
   flex: 3 0 0 !important; }
 
+html {
+  scroll-behavior: smooth; }
+
 .case-study.wrap {
   position: relative;
   max-width: 100vw;
-  padding: 0; }
+  padding: 0;
+  overflow: hidden; }
   .case-study.wrap section.case-study-box {
     position: relative;
     height: 90vh;
@@ -3318,7 +3322,7 @@ div.entry-content {
       align-self: flex-start; }
       .case-study.wrap section.case-study-box a.text-container h2.case-study-title {
         color: white; }
-        .case-study.wrap section.case-study-box a.text-container h2.case-study-title span {
+        .case-study.wrap section.case-study-box a.text-container h2.case-study-title span.title {
           background: #141414;
           box-shadow: inset 6px 4px 25px 0 #1e231e, 0 0px 0px 0 #1e231e, 0 14px 20px 0 rgba(0, 0, 0, 0.5), 10px 24px 50px 0 rgba(0, 0, 0, 0.15), 20px 34px 30px rgba(0, 0, 0, 0.1), 2px 6px 47px 0px rgba(0, 0, 0, 0.1) !important;
           box-decoration-break: clone;
@@ -3336,7 +3340,8 @@ div.entry-content {
           line-height: 1.9;
           font-size: 2em;
           font-weight: 600;
-          transition: all 0.3s cubic-bezier(0.84, 0.01, 0.19, 0.93); }
+          transition: all 0.3s cubic-bezier(0.84, 0.01, 0.19, 0.93);
+          will-change: box-shadow; }
       .case-study.wrap section.case-study-box a.text-container h3.case-study-subheading {
         color: white; }
         .case-study.wrap section.case-study-box a.text-container h3.case-study-subheading span {
@@ -3350,7 +3355,8 @@ div.entry-content {
           box-decoration-break: clone;
           -webkit-box-decoration-break: clone;
           line-height: 1.8;
-          transition: all 0.3s cubic-bezier(0.84, 0.01, 0.19, 0.93); }
+          transition: all 0.3s cubic-bezier(0.84, 0.01, 0.19, 0.93);
+          will-change: box-shadow; }
       .case-study.wrap section.case-study-box a.text-container:hover h2.case-study-title span.title {
         transition: all 0.5s cubic-bezier(0.84, 0.01, 0.19, 0.93);
         box-shadow: inset 6px 4px 25px 0 #1e231e, -1em 0px 0px 0px #191a19, 0 0px 0px 0 rgba(0, 0, 0, 0.5), 0px 0px 0px 0 rgba(0, 0, 0, 0.15), 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 0px rgba(0, 0, 0, 0.1) !important;
@@ -3379,20 +3385,26 @@ div.entry-content {
         -webkit-box-decoration-break: clone;
         line-height: 1.8;
         transition: all 0.5s cubic-bezier(0.84, 0.01, 0.19, 0.93); }
-      .case-study.wrap section.case-study-box a.text-container:hover + img {
-        transform: translate(100px, 0px);
+      .case-study.wrap section.case-study-box a.text-container:hover + div.img-container img.section-img {
+        transform: translate(0px, 0px);
         transition: all 0.8s cubic-bezier(0.84, 0.01, 0.19, 0.93);
-        filter: blur(0.5px); }
-    .case-study.wrap section.case-study-box img.section-img {
-      object-fit: cover;
-      z-index: 0;
+        filter: blur(0px); }
+    .case-study.wrap section.case-study-box div.img-container {
       position: absolute;
-      top: 0;
-      min-height: 110%;
-      min-width: calc(110% + 100px);
-      filter: blur(2.5px);
-      transform: translate(0, 0);
-      transition: all 0.5s cubic-bezier(0.84, 0.01, 0.19, 0.93); }
+      width: 100%;
+      height: 100%; }
+      .case-study.wrap section.case-study-box div.img-container img.section-img {
+        will-change: transform;
+        object-fit: cover;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        min-height: 110%;
+        min-width: calc(110% + 100px);
+        filter: blur(2.5px);
+        transform: translate(-100px, 0);
+        will-change: blur, transform;
+        transition: all 0.5s cubic-bezier(0.84, 0.01, 0.19, 0.93); }
     .case-study.wrap section.case-study-box div.overlay {
       position: absolute;
       top: 0;
@@ -3878,3 +3890,5 @@ ul.ab-social-links li a {
 div.ab-block-profile {
   margin-top: 100px; }
 
+
+/*# sourceMappingURL=main.min.css.map*/

@@ -37,9 +37,11 @@ get_template_part('template-parts/header/site', 'nav'); ?>
 						</a>
 
 
-
-						<img class="section-img" src="<?php $imageLocation = get_the_post_thumbnail_url(get_the_ID(), 'large');
-																																			echo $imageLocation; ?>">
+					<div class="rellax img-container" data-rellax-speed="-7" data-rellax-percentage="0.5">
+						<img class="section-img" src="
+							<?php $imageLocation = get_the_post_thumbnail_url(get_the_ID(), 'large');
+						echo $imageLocation; ?>">
+					</div>
 
 						<div  class="overlay" style="<?php echo get_field("overlay_background_grad"); ?>"></div>
 

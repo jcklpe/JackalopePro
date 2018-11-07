@@ -7,14 +7,8 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-// include the CSS critical path plugins
-//const Critters = require('critters-webpack-plugin');
+const Rellax = require('rellax');
 
-//include rellax plugin
-// const RellaxPlugin = require('rellax');
-
-// include HTML critical CSS plugin
-const CriticalCSSPlugin = require('html-critical-webpack-plugin');
 
 module.exports = {
     entry: ['./assets/js/src/app.js', './assets/css/src/app.scss'],
@@ -22,6 +16,7 @@ module.exports = {
         filename: './assets/js/build/app.min.js',
         path: path.resolve(__dirname)
     },
+    devtool: "source-map",
     watch: true,
     module: {
         rules: [
@@ -39,7 +34,22 @@ module.exports = {
             //Compile SCSS to css
             {
                 test: /\.(sass|scss)$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+                // use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -49,29 +59,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: './assets/css/build/main.min.css'
         }),
-        // new Critters({
-        //     /// optional configuration (see below)
-        // Does not appear to work with PHP
-        // }),
 
-
-        // new RellaxPlugin({
-
-        // }),
-
-        // new CriticalCSSPlugin({
-        //     base: path.resolve(__dirname, 'critical'),
-        //     src: 'index.php',
-        //     dest: 'index.html',
-        //     inline: true,
-        //     minify: true,
-        //     extract: true,
-        //     width: 375,
-        //     height: 565,
-        //     penthouse: {
-        //         blockJSRequests: false,
-        //     },
-        // }),
     ],
 
 
@@ -85,5 +73,8 @@ module.exports = {
             // enable the css minification plugin
             new OptimizeCSSAssetsPlugin({}),
         ]
-    }
+    },
+
+
+
 };
