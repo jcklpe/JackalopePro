@@ -1,12 +1,14 @@
 span.edit-link {
     position: absolute;
     bottom: 100px;
+    right: 10px;
+    padding: 10px 15px;
     background: yellow;
-    font-size: 2em!important;
+    font-size: 2em !important;
     font-weight: bold;
 
 }
 
 a:focus {
-    outline: none!important;
+    outline: none !important;
 }

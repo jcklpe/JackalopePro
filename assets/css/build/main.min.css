@@ -3274,6 +3274,8 @@ html.is-animating .transition-move-right {
 span.edit-link {
   position: absolute;
   bottom: 100px;
+  right: 10px;
+  padding: 10px 15px;
   background: yellow;
   font-size: 2em !important;
   font-weight: bold; }
@@ -3471,7 +3473,7 @@ div.entry-content h3 {
   padding-left: .9em;
   margin-left: -1em;
   position: relative;
-  font-size: 1.2em;
+  font-size: 2em;
   box-shadow: 0 0px 0px 0px #1e231e, inset 2px 2px 5px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone; }
@@ -3878,17 +3880,49 @@ a.wp-block-button__link {
   box-shadow: 0 0px 0px 0px #1e231e, inset 2px 2px 10px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone; }
-
-ul.ab-social-links li a {
-  background: #141414 !important; }
-  ul.ab-social-links li a i {
-    background: #141414 !important;
-    box-shadow: 0 0px 0px 0px #1e231e, inset 1px 1px 3px 0 #1e231e, 0 7px 10px 0 rgba(0, 0, 0, 0.3), 5px 10px 10px 0 rgba(0, 0, 0, 0.1), 10px 12px 8px rgba(0, 0, 0, 0.09), 1px 6px 13px 0px rgba(0, 0, 0, 0.09) !important;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone; }
+  a.wp-block-button__link:focus, a.wp-block-button__link:hover {
+    background: #282828 !important; }
 
 div.ab-block-profile {
   margin-top: 100px; }
+
+.wp-block-gallery {
+  max-height: 60vh;
+  position: relative;
+  left: -17vw;
+  width: 90vw;
+  align-items: center;
+  margin: 13vh 0; }
+  @media (max-width: 767px) {
+    .wp-block-gallery {
+      left: 0;
+      max-height: unset; } }
+  .wp-block-gallery.columns-3 .blocks-gallery-item {
+    align-items: center; }
+    @media (max-width: 767px) {
+      .wp-block-gallery.columns-3 .blocks-gallery-item {
+        width: 100%;
+        margin-right: unset; } }
+    .wp-block-gallery.columns-3 .blocks-gallery-item figure img {
+      max-height: 60vh; }
+  .wp-block-gallery.double-decker {
+    max-height: 60vh; }
+    @media (max-width: 767px) {
+      .wp-block-gallery.double-decker {
+        max-height: unset; } }
+    .wp-block-gallery.double-decker img {
+      max-height: 30vh; }
+
+div.entry-content {
+  margin-bottom: 50px; }
+  div.entry-content p {
+    font-size: 1.5em; }
+
+div.wrap.wrap-post {
+  max-width: 1250px !important; }
+
+#primary.content-area {
+  max-width: 1000px !important; }
 
 
 /*# sourceMappingURL=main.min.css.map*/

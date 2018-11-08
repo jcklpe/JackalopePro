@@ -1,18 +1,12 @@
 a.wp-block-button__link {
-    border-radius: 0px!important;
-    background: $black!important; //determined elsewhere
+    border-radius: 0px !important;
+    background: $black !important; //determined elsewhere
     @include block-subheading(2px, 2px, 10px);
-}
 
-ul.ab-social-links {
-        li {
-            a {
-            background: $black !important; //actually determined by the block settings
+    &:focus,
+    &:hover {
+        background: rgb(40, 40, 40) !important;
 
-                i {
-                    background: $black !important;
-                    @include block-subheading(1px, 1px, 3px);
-                }
-            }
-        }
+
+    }
 }

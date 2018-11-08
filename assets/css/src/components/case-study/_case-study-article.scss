@@ -1,7 +1,7 @@
 //- Case Study Article
 
 #page.site {
-    background: white!important; //HACK: doing this to make sure the post background is white
+    background: white !important; //HACK: doing this to make sure the post background is white
     transition: .4s;
 }
 
@@ -14,13 +14,15 @@ html.is-animating #page.site {
     background: $black !important; //HACK: doing this to make the background black
 }
 
+
 div#content {
     div.wrap-post {
         background: white;
         position: relative;
         top: -200px;
+
         @include breakpoint(phone) {
-            top:0;
+            top: 0;
         }
 
         z-index: 5;
@@ -47,7 +49,7 @@ div.entry-content {
     // top: -100px;
     // z-index: 5;
 
-    & > h2 {
+    &>h2 {
         background: $black;
         display: inline-block;
         color: white;
@@ -82,12 +84,12 @@ div.entry-content {
         padding-left: .9em;
         margin-left: -1em;
         position: relative;
-        font-size: 1.2em;
+        font-size: 2em;
         @include block-subheading(2px, 2px, 5px);
     }
 }
 
 .ab-block-container.container-1 {
-@include border-it(red);
+    @include border-it(red);
 
 }

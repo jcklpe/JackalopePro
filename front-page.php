@@ -37,7 +37,7 @@ get_template_part('template-parts/header/site', 'nav'); ?>
 						</a>
 
 
-					<div class="rellax img-container" data-rellax-speed="-7" data-rellax-percentage="0.5">
+					<div class=" img-container" data-rellax-speed="-7" data-rellax-percentage="0.5">
 						<img class="section-img" src="
 							<?php $imageLocation = get_the_post_thumbnail_url(get_the_ID(), 'large');
 						echo $imageLocation; ?>">

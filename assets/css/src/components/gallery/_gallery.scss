@@ -1,0 +1,47 @@
+//-IMAGE GALLERY
+
+.wp-block-gallery {
+    max-height: 60vh;
+    position: relative;
+    left: -17vw;
+    width: 90vw;
+    align-items: center;
+    margin: 13vh 0;
+
+    @include breakpoint(phone) {
+        left: 0;
+        max-height: unset;
+    }
+
+
+
+    &.columns-3 {
+        .blocks-gallery-item {
+            align-items: center;
+
+            @include breakpoint(phone) {
+                width: 100%;
+                margin-right: unset;
+            }
+
+            figure {
+                img {
+                    max-height: 60vh;
+
+                }
+            }
+        }
+    }
+
+    &.double-decker {
+        max-height: 60vh;
+
+        @include breakpoint(phone) {
+            max-height: unset;
+        }
+
+        img {
+            max-height: 30vh;
+        }
+    }
+}
